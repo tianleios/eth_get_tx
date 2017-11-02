@@ -1,0 +1,359 @@
+2017-11-01 17:31:27,240 INFO [org.springframework.web.context.ContextLoader] - Root WebApplicationContext: initialization started
+2017-11-01 17:31:27,491 INFO [org.springframework.web.context.support.XmlWebApplicationContext] - Refreshing Root WebApplicationContext: startup date [Wed Nov 01 17:31:27 CST 2017]; root of context hierarchy
+2017-11-01 17:31:27,552 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from URL [file:/Users/tianlei/Documents/数字货币/xn-coin/target/coni-webapp/WEB-INF/classes/spring/applicationContext.xml]
+2017-11-01 17:31:28,114 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from ServletContext resource [/WEB-INF/conf/spring/service-beans.xml]
+2017-11-01 17:31:28,426 INFO [org.springframework.context.support.PropertySourcesPlaceholderConfigurer] - Loading properties file from URL [file:/Users/tianlei/Documents/数字货币/xn-coin/target/coni-webapp/WEB-INF/classes/application.properties]
+2017-11-01 17:31:30,239 INFO [org.springframework.web.context.ContextLoader] - Root WebApplicationContext: initialization completed in 2998 ms
+2017-11-01 17:31:30,298 INFO [org.springframework.web.servlet.DispatcherServlet] - FrameworkServlet 'mvcServlet': initialization started
+2017-11-01 17:31:30,303 INFO [org.springframework.web.context.support.XmlWebApplicationContext] - Refreshing WebApplicationContext for namespace 'mvcServlet-servlet': startup date [Wed Nov 01 17:31:30 CST 2017]; parent: Root WebApplicationContext
+2017-11-01 17:31:30,306 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from file [/Users/tianlei/Documents/数字货币/xn-coin/target/coni-webapp/WEB-INF/classes/spring/spring_bo.xml]
+2017-11-01 17:31:30,322 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from file [/Users/tianlei/Documents/数字货币/xn-coin/target/coni-webapp/WEB-INF/classes/spring/applicationContext.xml]
+2017-11-01 17:31:30,381 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from file [/Users/tianlei/Documents/数字货币/xn-coin/target/coni-webapp/WEB-INF/classes/spring/spring_quartz.xml]
+2017-11-01 17:31:30,444 INFO [org.springframework.context.support.PropertySourcesPlaceholderConfigurer] - Loading properties file from URL [file:/Users/tianlei/Documents/数字货币/xn-coin/target/coni-webapp/WEB-INF/classes/application.properties]
+2017-11-01 17:31:30,800 INFO [org.quartz.impl.StdSchedulerFactory] - Using default implementation for ThreadExecutor
+2017-11-01 17:31:30,828 INFO [org.quartz.core.SchedulerSignalerImpl] - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2017-11-01 17:31:30,831 INFO [org.quartz.core.QuartzScheduler] - Quartz Scheduler v.2.2.1 created.
+2017-11-01 17:31:30,833 INFO [org.quartz.simpl.RAMJobStore] - RAMJobStore initialized.
+2017-11-01 17:31:30,834 INFO [org.quartz.core.QuartzScheduler] - Scheduler meta-data: Quartz Scheduler (v2.2.1) 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2017-11-01 17:31:30,835 INFO [org.quartz.impl.StdSchedulerFactory] - Quartz scheduler 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' initialized from an externally provided properties instance.
+2017-11-01 17:31:30,835 INFO [org.quartz.impl.StdSchedulerFactory] - Quartz scheduler version: 2.2.1
+2017-11-01 17:31:30,838 INFO [org.quartz.core.QuartzScheduler] - JobFactory set to: org.springframework.scheduling.quartz.AdaptableJobFactory@79dfe7a7
+2017-11-01 17:31:30,906 INFO [org.springframework.context.support.DefaultLifecycleProcessor] - Starting beans in phase 2147483647
+2017-11-01 17:31:30,907 INFO [org.springframework.scheduling.quartz.SchedulerFactoryBean] - Starting Quartz Scheduler now
+2017-11-01 17:31:30,907 INFO [org.quartz.core.QuartzScheduler] - Scheduler org.springframework.scheduling.quartz.SchedulerFactoryBean#0_$_NON_CLUSTERED started.
+2017-11-01 17:31:31,232 INFO [org.springframework.web.servlet.DispatcherServlet] - FrameworkServlet 'mvcServlet': initialization completed in 933 ms
+2017-11-01 17:31:31,584 WARN [org.springframework.web.servlet.PageNotFound] - No mapping found for HTTP request with URI [/] in DispatcherServlet with name 'mvcServlet'
+2017-11-01 17:31:31,600 WARN [org.springframework.web.servlet.PageNotFound] - No mapping found for HTTP request with URI [/] in DispatcherServlet with name 'mvcServlet'
+2017-11-01 17:31:31,795 WARN [org.springframework.web.servlet.PageNotFound] - No mapping found for HTTP request with URI [/] in DispatcherServlet with name 'mvcServlet'
+2017-11-01 17:31:42,012 INFO [com.cdkj.coin.APIServlet] - Successful Deployment
+2017-11-01 17:34:41,595 WARN [org.springframework.web.servlet.PageNotFound] - No mapping found for HTTP request with URI [/] in DispatcherServlet with name 'mvcServlet'
+2017-11-01 17:35:37,945 WARN [org.springframework.web.servlet.PageNotFound] - No mapping found for HTTP request with URI [/] in DispatcherServlet with name 'mvcServlet'
+2017-11-01 17:35:39,213 WARN [org.springframework.web.servlet.PageNotFound] - No mapping found for HTTP request with URI [/] in DispatcherServlet with name 'mvcServlet'
+2017-11-01 17:35:40,321 WARN [org.springframework.web.servlet.PageNotFound] - No mapping found for HTTP request with URI [/] in DispatcherServlet with name 'mvcServlet'
+2017-11-01 17:36:02,823 INFO [com.cdkj.coin.APIServlet] - Successful Deployment
+2017-11-01 17:45:31,240 INFO [org.springframework.web.context.support.XmlWebApplicationContext] - Closing WebApplicationContext for namespace 'mvcServlet-servlet': startup date [Wed Nov 01 17:31:30 CST 2017]; parent: Root WebApplicationContext
+2017-11-01 17:45:31,244 INFO [org.springframework.context.support.DefaultLifecycleProcessor] - Stopping beans in phase 2147483647
+2017-11-01 17:45:31,511 INFO [org.quartz.core.QuartzScheduler] - Scheduler org.springframework.scheduling.quartz.SchedulerFactoryBean#0_$_NON_CLUSTERED paused.
+2017-11-01 17:45:31,512 INFO [org.springframework.scheduling.quartz.SchedulerFactoryBean] - Shutting down Quartz Scheduler
+2017-11-01 17:45:31,512 INFO [org.quartz.core.QuartzScheduler] - Scheduler org.springframework.scheduling.quartz.SchedulerFactoryBean#0_$_NON_CLUSTERED shutting down.
+2017-11-01 17:45:31,512 INFO [org.quartz.core.QuartzScheduler] - Scheduler org.springframework.scheduling.quartz.SchedulerFactoryBean#0_$_NON_CLUSTERED paused.
+2017-11-01 17:45:31,512 INFO [org.quartz.core.QuartzScheduler] - Scheduler org.springframework.scheduling.quartz.SchedulerFactoryBean#0_$_NON_CLUSTERED shutdown complete.
+2017-11-01 17:45:31,515 INFO [org.springframework.web.context.support.XmlWebApplicationContext] - Closing Root WebApplicationContext: startup date [Wed Nov 01 17:31:27 CST 2017]; root of context hierarchy
+2017-11-01 17:45:35,205 INFO [org.springframework.web.context.ContextLoader] - Root WebApplicationContext: initialization started
+2017-11-01 17:45:35,360 INFO [org.springframework.web.context.support.XmlWebApplicationContext] - Refreshing Root WebApplicationContext: startup date [Wed Nov 01 17:45:35 CST 2017]; root of context hierarchy
+2017-11-01 17:45:35,417 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from URL [file:/Users/tianlei/Documents/数字货币/xn-coin/target/coni-webapp/WEB-INF/classes/spring/applicationContext.xml]
+2017-11-01 17:45:35,685 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from ServletContext resource [/WEB-INF/conf/spring/service-beans.xml]
+2017-11-01 17:45:35,923 INFO [org.springframework.context.support.PropertySourcesPlaceholderConfigurer] - Loading properties file from URL [file:/Users/tianlei/Documents/数字货币/xn-coin/target/coni-webapp/WEB-INF/classes/application.properties]
+2017-11-01 17:45:37,386 INFO [org.springframework.web.context.ContextLoader] - Root WebApplicationContext: initialization completed in 2179 ms
+2017-11-01 17:45:37,414 INFO [org.springframework.web.servlet.DispatcherServlet] - FrameworkServlet 'mvcServlet': initialization started
+2017-11-01 17:45:37,419 INFO [org.springframework.web.context.support.XmlWebApplicationContext] - Refreshing WebApplicationContext for namespace 'mvcServlet-servlet': startup date [Wed Nov 01 17:45:37 CST 2017]; parent: Root WebApplicationContext
+2017-11-01 17:45:37,421 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from file [/Users/tianlei/Documents/数字货币/xn-coin/target/coni-webapp/WEB-INF/classes/spring/spring_bo.xml]
+2017-11-01 17:45:37,431 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from file [/Users/tianlei/Documents/数字货币/xn-coin/target/coni-webapp/WEB-INF/classes/spring/applicationContext.xml]
+2017-11-01 17:45:37,501 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from file [/Users/tianlei/Documents/数字货币/xn-coin/target/coni-webapp/WEB-INF/classes/spring/spring_quartz.xml]
+2017-11-01 17:45:37,547 INFO [org.springframework.context.support.PropertySourcesPlaceholderConfigurer] - Loading properties file from URL [file:/Users/tianlei/Documents/数字货币/xn-coin/target/coni-webapp/WEB-INF/classes/application.properties]
+2017-11-01 17:45:37,790 INFO [org.quartz.impl.StdSchedulerFactory] - Using default implementation for ThreadExecutor
+2017-11-01 17:45:37,820 INFO [org.quartz.core.SchedulerSignalerImpl] - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2017-11-01 17:45:37,822 INFO [org.quartz.core.QuartzScheduler] - Quartz Scheduler v.2.2.1 created.
+2017-11-01 17:45:37,824 INFO [org.quartz.simpl.RAMJobStore] - RAMJobStore initialized.
+2017-11-01 17:45:37,825 INFO [org.quartz.core.QuartzScheduler] - Scheduler meta-data: Quartz Scheduler (v2.2.1) 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2017-11-01 17:45:37,825 INFO [org.quartz.impl.StdSchedulerFactory] - Quartz scheduler 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' initialized from an externally provided properties instance.
+2017-11-01 17:45:37,825 INFO [org.quartz.impl.StdSchedulerFactory] - Quartz scheduler version: 2.2.1
+2017-11-01 17:45:37,828 INFO [org.quartz.core.QuartzScheduler] - JobFactory set to: org.springframework.scheduling.quartz.AdaptableJobFactory@2f2a7c55
+2017-11-01 17:45:37,896 INFO [org.springframework.context.support.DefaultLifecycleProcessor] - Starting beans in phase 2147483647
+2017-11-01 17:45:37,896 INFO [org.springframework.scheduling.quartz.SchedulerFactoryBean] - Starting Quartz Scheduler now
+2017-11-01 17:45:37,897 INFO [org.quartz.core.QuartzScheduler] - Scheduler org.springframework.scheduling.quartz.SchedulerFactoryBean#0_$_NON_CLUSTERED started.
+2017-11-01 17:45:38,087 INFO [org.springframework.web.servlet.DispatcherServlet] - FrameworkServlet 'mvcServlet': initialization completed in 672 ms
+2017-11-01 17:45:50,244 INFO [org.hibernate.validator.internal.util.Version] - HV000001: Hibernate Validator 5.1.1.Final
+2017-11-01 18:50:15,217 INFO [org.springframework.web.context.support.XmlWebApplicationContext] - Closing WebApplicationContext for namespace 'mvcServlet-servlet': startup date [Wed Nov 01 17:45:37 CST 2017]; parent: Root WebApplicationContext
+2017-11-01 18:50:15,226 INFO [org.springframework.context.support.DefaultLifecycleProcessor] - Stopping beans in phase 2147483647
+2017-11-01 18:50:15,278 INFO [org.quartz.core.QuartzScheduler] - Scheduler org.springframework.scheduling.quartz.SchedulerFactoryBean#0_$_NON_CLUSTERED paused.
+2017-11-01 18:50:15,279 INFO [org.springframework.scheduling.quartz.SchedulerFactoryBean] - Shutting down Quartz Scheduler
+2017-11-01 18:50:15,279 INFO [org.quartz.core.QuartzScheduler] - Scheduler org.springframework.scheduling.quartz.SchedulerFactoryBean#0_$_NON_CLUSTERED shutting down.
+2017-11-01 18:50:15,279 INFO [org.quartz.core.QuartzScheduler] - Scheduler org.springframework.scheduling.quartz.SchedulerFactoryBean#0_$_NON_CLUSTERED paused.
+2017-11-01 18:50:15,279 INFO [org.quartz.core.QuartzScheduler] - Scheduler org.springframework.scheduling.quartz.SchedulerFactoryBean#0_$_NON_CLUSTERED shutdown complete.
+2017-11-01 18:50:15,284 INFO [org.springframework.web.context.support.XmlWebApplicationContext] - Closing Root WebApplicationContext: startup date [Wed Nov 01 17:45:35 CST 2017]; root of context hierarchy
+2017-11-01 18:50:18,335 INFO [org.springframework.web.context.ContextLoader] - Root WebApplicationContext: initialization started
+2017-11-01 18:50:18,439 INFO [org.springframework.web.context.support.XmlWebApplicationContext] - Refreshing Root WebApplicationContext: startup date [Wed Nov 01 18:50:18 CST 2017]; root of context hierarchy
+2017-11-01 18:50:18,486 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from URL [file:/Users/tianlei/Documents/数字货币/xn-coin/target/coni-webapp/WEB-INF/classes/spring/applicationContext.xml]
+2017-11-01 18:50:18,743 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from ServletContext resource [/WEB-INF/conf/spring/service-beans.xml]
+2017-11-01 18:50:19,479 INFO [org.springframework.context.support.PropertySourcesPlaceholderConfigurer] - Loading properties file from URL [file:/Users/tianlei/Documents/数字货币/xn-coin/target/coni-webapp/WEB-INF/classes/application.properties]
+2017-11-01 18:50:21,110 INFO [org.springframework.web.context.ContextLoader] - Root WebApplicationContext: initialization completed in 2775 ms
+2017-11-01 18:50:21,261 INFO [org.springframework.web.servlet.DispatcherServlet] - FrameworkServlet 'mvcServlet': initialization started
+2017-11-01 18:50:21,268 INFO [org.springframework.web.context.support.XmlWebApplicationContext] - Refreshing WebApplicationContext for namespace 'mvcServlet-servlet': startup date [Wed Nov 01 18:50:21 CST 2017]; parent: Root WebApplicationContext
+2017-11-01 18:50:21,270 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from file [/Users/tianlei/Documents/数字货币/xn-coin/target/coni-webapp/WEB-INF/classes/spring/spring_bo.xml]
+2017-11-01 18:50:21,287 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from file [/Users/tianlei/Documents/数字货币/xn-coin/target/coni-webapp/WEB-INF/classes/spring/applicationContext.xml]
+2017-11-01 18:50:21,475 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from file [/Users/tianlei/Documents/数字货币/xn-coin/target/coni-webapp/WEB-INF/classes/spring/spring_quartz.xml]
+2017-11-01 18:50:21,582 INFO [org.springframework.context.support.PropertySourcesPlaceholderConfigurer] - Loading properties file from URL [file:/Users/tianlei/Documents/数字货币/xn-coin/target/coni-webapp/WEB-INF/classes/application.properties]
+2017-11-01 18:50:21,978 INFO [org.quartz.impl.StdSchedulerFactory] - Using default implementation for ThreadExecutor
+2017-11-01 18:50:22,004 INFO [org.quartz.core.SchedulerSignalerImpl] - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2017-11-01 18:50:22,005 INFO [org.quartz.core.QuartzScheduler] - Quartz Scheduler v.2.2.1 created.
+2017-11-01 18:50:22,008 INFO [org.quartz.simpl.RAMJobStore] - RAMJobStore initialized.
+2017-11-01 18:50:22,010 INFO [org.quartz.core.QuartzScheduler] - Scheduler meta-data: Quartz Scheduler (v2.2.1) 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2017-11-01 18:50:22,010 INFO [org.quartz.impl.StdSchedulerFactory] - Quartz scheduler 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' initialized from an externally provided properties instance.
+2017-11-01 18:50:22,010 INFO [org.quartz.impl.StdSchedulerFactory] - Quartz scheduler version: 2.2.1
+2017-11-01 18:50:22,013 INFO [org.quartz.core.QuartzScheduler] - JobFactory set to: org.springframework.scheduling.quartz.AdaptableJobFactory@5e1370fb
+2017-11-01 18:50:22,067 INFO [org.springframework.context.support.DefaultLifecycleProcessor] - Starting beans in phase 2147483647
+2017-11-01 18:50:22,067 INFO [org.springframework.scheduling.quartz.SchedulerFactoryBean] - Starting Quartz Scheduler now
+2017-11-01 18:50:22,067 INFO [org.quartz.core.QuartzScheduler] - Scheduler org.springframework.scheduling.quartz.SchedulerFactoryBean#0_$_NON_CLUSTERED started.
+2017-11-01 18:50:22,297 INFO [org.springframework.web.servlet.DispatcherServlet] - FrameworkServlet 'mvcServlet': initialization completed in 1035 ms
+2017-11-01 19:08:35,432 INFO [org.springframework.web.context.support.XmlWebApplicationContext] - Closing WebApplicationContext for namespace 'mvcServlet-servlet': startup date [Wed Nov 01 18:50:21 CST 2017]; parent: Root WebApplicationContext
+2017-11-01 19:08:35,442 INFO [org.springframework.context.support.DefaultLifecycleProcessor] - Stopping beans in phase 2147483647
+2017-11-01 19:08:35,494 INFO [org.quartz.core.QuartzScheduler] - Scheduler org.springframework.scheduling.quartz.SchedulerFactoryBean#0_$_NON_CLUSTERED paused.
+2017-11-01 19:08:35,497 INFO [org.springframework.scheduling.quartz.SchedulerFactoryBean] - Shutting down Quartz Scheduler
+2017-11-01 19:08:35,497 INFO [org.quartz.core.QuartzScheduler] - Scheduler org.springframework.scheduling.quartz.SchedulerFactoryBean#0_$_NON_CLUSTERED shutting down.
+2017-11-01 19:08:35,497 INFO [org.quartz.core.QuartzScheduler] - Scheduler org.springframework.scheduling.quartz.SchedulerFactoryBean#0_$_NON_CLUSTERED paused.
+2017-11-01 19:08:35,498 INFO [org.quartz.core.QuartzScheduler] - Scheduler org.springframework.scheduling.quartz.SchedulerFactoryBean#0_$_NON_CLUSTERED shutdown complete.
+2017-11-01 19:08:35,506 INFO [org.springframework.web.context.support.XmlWebApplicationContext] - Closing Root WebApplicationContext: startup date [Wed Nov 01 18:50:18 CST 2017]; root of context hierarchy
+2017-11-01 19:08:39,866 INFO [org.springframework.web.context.ContextLoader] - Root WebApplicationContext: initialization started
+2017-11-01 19:08:39,973 INFO [org.springframework.web.context.support.XmlWebApplicationContext] - Refreshing Root WebApplicationContext: startup date [Wed Nov 01 19:08:39 CST 2017]; root of context hierarchy
+2017-11-01 19:08:40,021 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from URL [file:/Users/tianlei/Documents/数字货币/xn-coin/target/coni-webapp/WEB-INF/classes/spring/applicationContext.xml]
+2017-11-01 19:08:40,500 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from ServletContext resource [/WEB-INF/conf/spring/service-beans.xml]
+2017-11-01 19:08:40,928 INFO [org.springframework.context.support.PropertySourcesPlaceholderConfigurer] - Loading properties file from URL [file:/Users/tianlei/Documents/数字货币/xn-coin/target/coni-webapp/WEB-INF/classes/application.properties]
+2017-11-01 19:08:42,139 INFO [org.springframework.web.context.ContextLoader] - Root WebApplicationContext: initialization completed in 2272 ms
+2017-11-01 19:08:42,166 INFO [org.springframework.web.servlet.DispatcherServlet] - FrameworkServlet 'mvcServlet': initialization started
+2017-11-01 19:08:42,171 INFO [org.springframework.web.context.support.XmlWebApplicationContext] - Refreshing WebApplicationContext for namespace 'mvcServlet-servlet': startup date [Wed Nov 01 19:08:42 CST 2017]; parent: Root WebApplicationContext
+2017-11-01 19:08:42,174 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from file [/Users/tianlei/Documents/数字货币/xn-coin/target/coni-webapp/WEB-INF/classes/spring/spring_bo.xml]
+2017-11-01 19:08:42,184 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from file [/Users/tianlei/Documents/数字货币/xn-coin/target/coni-webapp/WEB-INF/classes/spring/applicationContext.xml]
+2017-11-01 19:08:42,261 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from file [/Users/tianlei/Documents/数字货币/xn-coin/target/coni-webapp/WEB-INF/classes/spring/spring_quartz.xml]
+2017-11-01 19:08:42,309 INFO [org.springframework.context.support.PropertySourcesPlaceholderConfigurer] - Loading properties file from URL [file:/Users/tianlei/Documents/数字货币/xn-coin/target/coni-webapp/WEB-INF/classes/application.properties]
+2017-11-01 19:08:42,522 INFO [org.quartz.impl.StdSchedulerFactory] - Using default implementation for ThreadExecutor
+2017-11-01 19:08:42,545 INFO [org.quartz.core.SchedulerSignalerImpl] - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2017-11-01 19:08:42,547 INFO [org.quartz.core.QuartzScheduler] - Quartz Scheduler v.2.2.1 created.
+2017-11-01 19:08:42,548 INFO [org.quartz.simpl.RAMJobStore] - RAMJobStore initialized.
+2017-11-01 19:08:42,549 INFO [org.quartz.core.QuartzScheduler] - Scheduler meta-data: Quartz Scheduler (v2.2.1) 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2017-11-01 19:08:42,550 INFO [org.quartz.impl.StdSchedulerFactory] - Quartz scheduler 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' initialized from an externally provided properties instance.
+2017-11-01 19:08:42,550 INFO [org.quartz.impl.StdSchedulerFactory] - Quartz scheduler version: 2.2.1
+2017-11-01 19:08:42,553 INFO [org.quartz.core.QuartzScheduler] - JobFactory set to: org.springframework.scheduling.quartz.AdaptableJobFactory@1d648323
+2017-11-01 19:08:42,605 INFO [org.springframework.context.support.DefaultLifecycleProcessor] - Starting beans in phase 2147483647
+2017-11-01 19:08:42,606 INFO [org.springframework.scheduling.quartz.SchedulerFactoryBean] - Starting Quartz Scheduler now
+2017-11-01 19:08:42,606 INFO [org.quartz.core.QuartzScheduler] - Scheduler org.springframework.scheduling.quartz.SchedulerFactoryBean#0_$_NON_CLUSTERED started.
+2017-11-01 19:08:42,855 INFO [org.springframework.web.servlet.DispatcherServlet] - FrameworkServlet 'mvcServlet': initialization completed in 689 ms
+2017-11-01 19:09:01,019 INFO [org.hibernate.validator.internal.util.Version] - HV000001: Hibernate Validator 5.1.1.Final
+2017-11-01 19:14:57,269 INFO [org.springframework.web.context.support.XmlWebApplicationContext] - Closing WebApplicationContext for namespace 'mvcServlet-servlet': startup date [Wed Nov 01 19:08:42 CST 2017]; parent: Root WebApplicationContext
+2017-11-01 19:14:57,272 INFO [org.springframework.context.support.DefaultLifecycleProcessor] - Stopping beans in phase 2147483647
+2017-11-01 19:14:57,321 INFO [org.quartz.core.QuartzScheduler] - Scheduler org.springframework.scheduling.quartz.SchedulerFactoryBean#0_$_NON_CLUSTERED paused.
+2017-11-01 19:14:57,321 INFO [org.springframework.scheduling.quartz.SchedulerFactoryBean] - Shutting down Quartz Scheduler
+2017-11-01 19:14:57,321 INFO [org.quartz.core.QuartzScheduler] - Scheduler org.springframework.scheduling.quartz.SchedulerFactoryBean#0_$_NON_CLUSTERED shutting down.
+2017-11-01 19:14:57,321 INFO [org.quartz.core.QuartzScheduler] - Scheduler org.springframework.scheduling.quartz.SchedulerFactoryBean#0_$_NON_CLUSTERED paused.
+2017-11-01 19:14:57,322 INFO [org.quartz.core.QuartzScheduler] - Scheduler org.springframework.scheduling.quartz.SchedulerFactoryBean#0_$_NON_CLUSTERED shutdown complete.
+2017-11-01 19:14:57,324 INFO [org.springframework.web.context.support.XmlWebApplicationContext] - Closing Root WebApplicationContext: startup date [Wed Nov 01 19:08:39 CST 2017]; root of context hierarchy
+2017-11-01 19:15:00,336 INFO [org.springframework.web.context.ContextLoader] - Root WebApplicationContext: initialization started
+2017-11-01 19:15:00,458 INFO [org.springframework.web.context.support.XmlWebApplicationContext] - Refreshing Root WebApplicationContext: startup date [Wed Nov 01 19:15:00 CST 2017]; root of context hierarchy
+2017-11-01 19:15:00,513 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from URL [file:/Users/tianlei/Documents/数字货币/xn-coin/target/coni-webapp/WEB-INF/classes/spring/applicationContext.xml]
+2017-11-01 19:15:00,922 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from ServletContext resource [/WEB-INF/conf/spring/service-beans.xml]
+2017-11-01 19:15:01,301 INFO [org.springframework.context.support.PropertySourcesPlaceholderConfigurer] - Loading properties file from URL [file:/Users/tianlei/Documents/数字货币/xn-coin/target/coni-webapp/WEB-INF/classes/application.properties]
+2017-11-01 19:15:02,854 INFO [org.springframework.web.context.ContextLoader] - Root WebApplicationContext: initialization completed in 2518 ms
+2017-11-01 19:15:02,879 INFO [org.springframework.web.servlet.DispatcherServlet] - FrameworkServlet 'mvcServlet': initialization started
+2017-11-01 19:15:02,883 INFO [org.springframework.web.context.support.XmlWebApplicationContext] - Refreshing WebApplicationContext for namespace 'mvcServlet-servlet': startup date [Wed Nov 01 19:15:02 CST 2017]; parent: Root WebApplicationContext
+2017-11-01 19:15:02,885 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from file [/Users/tianlei/Documents/数字货币/xn-coin/target/coni-webapp/WEB-INF/classes/spring/spring_bo.xml]
+2017-11-01 19:15:02,893 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from file [/Users/tianlei/Documents/数字货币/xn-coin/target/coni-webapp/WEB-INF/classes/spring/applicationContext.xml]
+2017-11-01 19:15:02,944 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from file [/Users/tianlei/Documents/数字货币/xn-coin/target/coni-webapp/WEB-INF/classes/spring/spring_quartz.xml]
+2017-11-01 19:15:02,973 INFO [org.springframework.context.support.PropertySourcesPlaceholderConfigurer] - Loading properties file from URL [file:/Users/tianlei/Documents/数字货币/xn-coin/target/coni-webapp/WEB-INF/classes/application.properties]
+2017-11-01 19:15:03,300 INFO [org.quartz.impl.StdSchedulerFactory] - Using default implementation for ThreadExecutor
+2017-11-01 19:15:03,319 INFO [org.quartz.core.SchedulerSignalerImpl] - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2017-11-01 19:15:03,320 INFO [org.quartz.core.QuartzScheduler] - Quartz Scheduler v.2.2.1 created.
+2017-11-01 19:15:03,321 INFO [org.quartz.simpl.RAMJobStore] - RAMJobStore initialized.
+2017-11-01 19:15:03,322 INFO [org.quartz.core.QuartzScheduler] - Scheduler meta-data: Quartz Scheduler (v2.2.1) 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2017-11-01 19:15:03,322 INFO [org.quartz.impl.StdSchedulerFactory] - Quartz scheduler 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' initialized from an externally provided properties instance.
+2017-11-01 19:15:03,322 INFO [org.quartz.impl.StdSchedulerFactory] - Quartz scheduler version: 2.2.1
+2017-11-01 19:15:03,324 INFO [org.quartz.core.QuartzScheduler] - JobFactory set to: org.springframework.scheduling.quartz.AdaptableJobFactory@7a39258a
+2017-11-01 19:15:03,374 INFO [org.springframework.context.support.DefaultLifecycleProcessor] - Starting beans in phase 2147483647
+2017-11-01 19:15:03,374 INFO [org.springframework.scheduling.quartz.SchedulerFactoryBean] - Starting Quartz Scheduler now
+2017-11-01 19:15:03,374 INFO [org.quartz.core.QuartzScheduler] - Scheduler org.springframework.scheduling.quartz.SchedulerFactoryBean#0_$_NON_CLUSTERED started.
+2017-11-01 19:15:03,787 INFO [org.springframework.web.servlet.DispatcherServlet] - FrameworkServlet 'mvcServlet': initialization completed in 907 ms
+2017-11-01 19:15:12,234 INFO [org.hibernate.validator.internal.util.Version] - HV000001: Hibernate Validator 5.1.1.Final
+2017-11-01 19:31:44,665 INFO [org.springframework.web.context.support.XmlWebApplicationContext] - Closing WebApplicationContext for namespace 'mvcServlet-servlet': startup date [Wed Nov 01 19:15:02 CST 2017]; parent: Root WebApplicationContext
+2017-11-01 19:31:44,674 INFO [org.springframework.context.support.DefaultLifecycleProcessor] - Stopping beans in phase 2147483647
+2017-11-01 19:31:44,725 INFO [org.quartz.core.QuartzScheduler] - Scheduler org.springframework.scheduling.quartz.SchedulerFactoryBean#0_$_NON_CLUSTERED paused.
+2017-11-01 19:31:44,727 INFO [org.springframework.scheduling.quartz.SchedulerFactoryBean] - Shutting down Quartz Scheduler
+2017-11-01 19:31:44,728 INFO [org.quartz.core.QuartzScheduler] - Scheduler org.springframework.scheduling.quartz.SchedulerFactoryBean#0_$_NON_CLUSTERED shutting down.
+2017-11-01 19:31:44,728 INFO [org.quartz.core.QuartzScheduler] - Scheduler org.springframework.scheduling.quartz.SchedulerFactoryBean#0_$_NON_CLUSTERED paused.
+2017-11-01 19:31:44,729 INFO [org.quartz.core.QuartzScheduler] - Scheduler org.springframework.scheduling.quartz.SchedulerFactoryBean#0_$_NON_CLUSTERED shutdown complete.
+2017-11-01 19:31:44,739 INFO [org.springframework.web.context.support.XmlWebApplicationContext] - Closing Root WebApplicationContext: startup date [Wed Nov 01 19:15:00 CST 2017]; root of context hierarchy
+2017-11-01 19:31:48,890 INFO [org.springframework.web.context.ContextLoader] - Root WebApplicationContext: initialization started
+2017-11-01 19:31:49,243 INFO [org.springframework.web.context.support.XmlWebApplicationContext] - Refreshing Root WebApplicationContext: startup date [Wed Nov 01 19:31:49 CST 2017]; root of context hierarchy
+2017-11-01 19:31:49,689 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from URL [file:/Users/tianlei/Documents/数字货币/xn-coin/target/coni-webapp/WEB-INF/classes/spring/applicationContext.xml]
+2017-11-01 19:31:50,627 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from ServletContext resource [/WEB-INF/conf/spring/service-beans.xml]
+2017-11-01 19:31:51,025 INFO [org.springframework.context.support.PropertySourcesPlaceholderConfigurer] - Loading properties file from URL [file:/Users/tianlei/Documents/数字货币/xn-coin/target/coni-webapp/WEB-INF/classes/application.properties]
+2017-11-01 19:31:52,417 INFO [org.springframework.web.context.ContextLoader] - Root WebApplicationContext: initialization completed in 3526 ms
+2017-11-01 19:31:52,453 INFO [org.springframework.web.servlet.DispatcherServlet] - FrameworkServlet 'mvcServlet': initialization started
+2017-11-01 19:31:52,457 INFO [org.springframework.web.context.support.XmlWebApplicationContext] - Refreshing WebApplicationContext for namespace 'mvcServlet-servlet': startup date [Wed Nov 01 19:31:52 CST 2017]; parent: Root WebApplicationContext
+2017-11-01 19:31:52,460 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from file [/Users/tianlei/Documents/数字货币/xn-coin/target/coni-webapp/WEB-INF/classes/spring/spring_bo.xml]
+2017-11-01 19:31:52,466 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from file [/Users/tianlei/Documents/数字货币/xn-coin/target/coni-webapp/WEB-INF/classes/spring/applicationContext.xml]
+2017-11-01 19:31:52,511 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from file [/Users/tianlei/Documents/数字货币/xn-coin/target/coni-webapp/WEB-INF/classes/spring/spring_quartz.xml]
+2017-11-01 19:31:52,581 INFO [org.springframework.context.support.PropertySourcesPlaceholderConfigurer] - Loading properties file from URL [file:/Users/tianlei/Documents/数字货币/xn-coin/target/coni-webapp/WEB-INF/classes/application.properties]
+2017-11-01 19:31:52,817 INFO [org.quartz.impl.StdSchedulerFactory] - Using default implementation for ThreadExecutor
+2017-11-01 19:31:52,837 INFO [org.quartz.core.SchedulerSignalerImpl] - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2017-11-01 19:31:52,838 INFO [org.quartz.core.QuartzScheduler] - Quartz Scheduler v.2.2.1 created.
+2017-11-01 19:31:52,839 INFO [org.quartz.simpl.RAMJobStore] - RAMJobStore initialized.
+2017-11-01 19:31:52,840 INFO [org.quartz.core.QuartzScheduler] - Scheduler meta-data: Quartz Scheduler (v2.2.1) 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2017-11-01 19:31:52,840 INFO [org.quartz.impl.StdSchedulerFactory] - Quartz scheduler 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' initialized from an externally provided properties instance.
+2017-11-01 19:31:52,840 INFO [org.quartz.impl.StdSchedulerFactory] - Quartz scheduler version: 2.2.1
+2017-11-01 19:31:52,842 INFO [org.quartz.core.QuartzScheduler] - JobFactory set to: org.springframework.scheduling.quartz.AdaptableJobFactory@2e8c35f8
+2017-11-01 19:31:52,891 INFO [org.springframework.context.support.DefaultLifecycleProcessor] - Starting beans in phase 2147483647
+2017-11-01 19:31:52,892 INFO [org.springframework.scheduling.quartz.SchedulerFactoryBean] - Starting Quartz Scheduler now
+2017-11-01 19:31:52,892 INFO [org.quartz.core.QuartzScheduler] - Scheduler org.springframework.scheduling.quartz.SchedulerFactoryBean#0_$_NON_CLUSTERED started.
+2017-11-01 19:31:53,156 INFO [org.springframework.web.servlet.DispatcherServlet] - FrameworkServlet 'mvcServlet': initialization completed in 703 ms
+2017-11-01 19:32:15,866 INFO [org.hibernate.validator.internal.util.Version] - HV000001: Hibernate Validator 5.1.1.Final
+2017-11-01 19:35:15,356 INFO [org.springframework.web.context.support.XmlWebApplicationContext] - Closing WebApplicationContext for namespace 'mvcServlet-servlet': startup date [Wed Nov 01 19:31:52 CST 2017]; parent: Root WebApplicationContext
+2017-11-01 19:35:15,365 INFO [org.springframework.context.support.DefaultLifecycleProcessor] - Stopping beans in phase 2147483647
+2017-11-01 19:35:15,433 INFO [org.quartz.core.QuartzScheduler] - Scheduler org.springframework.scheduling.quartz.SchedulerFactoryBean#0_$_NON_CLUSTERED paused.
+2017-11-01 19:35:15,434 INFO [org.springframework.scheduling.quartz.SchedulerFactoryBean] - Shutting down Quartz Scheduler
+2017-11-01 19:35:15,435 INFO [org.quartz.core.QuartzScheduler] - Scheduler org.springframework.scheduling.quartz.SchedulerFactoryBean#0_$_NON_CLUSTERED shutting down.
+2017-11-01 19:35:15,435 INFO [org.quartz.core.QuartzScheduler] - Scheduler org.springframework.scheduling.quartz.SchedulerFactoryBean#0_$_NON_CLUSTERED paused.
+2017-11-01 19:35:15,436 INFO [org.quartz.core.QuartzScheduler] - Scheduler org.springframework.scheduling.quartz.SchedulerFactoryBean#0_$_NON_CLUSTERED shutdown complete.
+2017-11-01 19:35:15,446 INFO [org.springframework.web.context.support.XmlWebApplicationContext] - Closing Root WebApplicationContext: startup date [Wed Nov 01 19:31:49 CST 2017]; root of context hierarchy
+2017-11-01 19:35:18,974 INFO [org.springframework.web.context.ContextLoader] - Root WebApplicationContext: initialization started
+2017-11-01 19:35:19,153 INFO [org.springframework.web.context.support.XmlWebApplicationContext] - Refreshing Root WebApplicationContext: startup date [Wed Nov 01 19:35:19 CST 2017]; root of context hierarchy
+2017-11-01 19:35:19,354 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from URL [file:/Users/tianlei/Documents/数字货币/xn-coin/target/coni-webapp/WEB-INF/classes/spring/applicationContext.xml]
+2017-11-01 19:35:19,995 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from ServletContext resource [/WEB-INF/conf/spring/service-beans.xml]
+2017-11-01 19:35:20,452 INFO [org.springframework.context.support.PropertySourcesPlaceholderConfigurer] - Loading properties file from URL [file:/Users/tianlei/Documents/数字货币/xn-coin/target/coni-webapp/WEB-INF/classes/application.properties]
+2017-11-01 19:35:21,931 INFO [org.springframework.web.context.ContextLoader] - Root WebApplicationContext: initialization completed in 2956 ms
+2017-11-01 19:35:21,952 INFO [org.springframework.web.servlet.DispatcherServlet] - FrameworkServlet 'mvcServlet': initialization started
+2017-11-01 19:35:21,956 INFO [org.springframework.web.context.support.XmlWebApplicationContext] - Refreshing WebApplicationContext for namespace 'mvcServlet-servlet': startup date [Wed Nov 01 19:35:21 CST 2017]; parent: Root WebApplicationContext
+2017-11-01 19:35:21,957 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from file [/Users/tianlei/Documents/数字货币/xn-coin/target/coni-webapp/WEB-INF/classes/spring/spring_bo.xml]
+2017-11-01 19:35:21,962 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from file [/Users/tianlei/Documents/数字货币/xn-coin/target/coni-webapp/WEB-INF/classes/spring/applicationContext.xml]
+2017-11-01 19:35:22,010 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from file [/Users/tianlei/Documents/数字货币/xn-coin/target/coni-webapp/WEB-INF/classes/spring/spring_quartz.xml]
+2017-11-01 19:35:22,076 INFO [org.springframework.context.support.PropertySourcesPlaceholderConfigurer] - Loading properties file from URL [file:/Users/tianlei/Documents/数字货币/xn-coin/target/coni-webapp/WEB-INF/classes/application.properties]
+2017-11-01 19:35:22,454 INFO [org.quartz.impl.StdSchedulerFactory] - Using default implementation for ThreadExecutor
+2017-11-01 19:35:22,480 INFO [org.quartz.core.SchedulerSignalerImpl] - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2017-11-01 19:35:22,481 INFO [org.quartz.core.QuartzScheduler] - Quartz Scheduler v.2.2.1 created.
+2017-11-01 19:35:22,483 INFO [org.quartz.simpl.RAMJobStore] - RAMJobStore initialized.
+2017-11-01 19:35:22,485 INFO [org.quartz.core.QuartzScheduler] - Scheduler meta-data: Quartz Scheduler (v2.2.1) 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2017-11-01 19:35:22,485 INFO [org.quartz.impl.StdSchedulerFactory] - Quartz scheduler 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' initialized from an externally provided properties instance.
+2017-11-01 19:35:22,486 INFO [org.quartz.impl.StdSchedulerFactory] - Quartz scheduler version: 2.2.1
+2017-11-01 19:35:22,488 INFO [org.quartz.core.QuartzScheduler] - JobFactory set to: org.springframework.scheduling.quartz.AdaptableJobFactory@6e9cc7b3
+2017-11-01 19:35:22,560 INFO [org.springframework.context.support.DefaultLifecycleProcessor] - Starting beans in phase 2147483647
+2017-11-01 19:35:22,561 INFO [org.springframework.scheduling.quartz.SchedulerFactoryBean] - Starting Quartz Scheduler now
+2017-11-01 19:35:22,561 INFO [org.quartz.core.QuartzScheduler] - Scheduler org.springframework.scheduling.quartz.SchedulerFactoryBean#0_$_NON_CLUSTERED started.
+2017-11-01 19:35:23,084 INFO [org.springframework.web.servlet.DispatcherServlet] - FrameworkServlet 'mvcServlet': initialization completed in 1132 ms
+2017-11-01 19:35:52,728 INFO [org.springframework.web.context.support.XmlWebApplicationContext] - Closing WebApplicationContext for namespace 'mvcServlet-servlet': startup date [Wed Nov 01 19:35:21 CST 2017]; parent: Root WebApplicationContext
+2017-11-01 19:35:52,734 INFO [org.springframework.context.support.DefaultLifecycleProcessor] - Stopping beans in phase 2147483647
+2017-11-01 19:35:52,760 INFO [org.springframework.web.context.support.XmlWebApplicationContext] - Closing Root WebApplicationContext: startup date [Wed Nov 01 19:35:19 CST 2017]; root of context hierarchy
+2017-11-01 19:41:30,956 INFO [org.springframework.web.context.ContextLoader] - Root WebApplicationContext: initialization started
+2017-11-01 19:41:31,452 INFO [org.springframework.web.context.support.XmlWebApplicationContext] - Refreshing Root WebApplicationContext: startup date [Wed Nov 01 19:41:31 CST 2017]; root of context hierarchy
+2017-11-01 19:41:31,534 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from URL [file:/Users/tianlei/Documents/coin/xn-coin/target/coni-webapp/WEB-INF/classes/spring/applicationContext.xml]
+2017-11-01 19:41:32,454 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from ServletContext resource [/WEB-INF/conf/spring/service-beans.xml]
+2017-11-01 19:41:32,910 INFO [org.springframework.context.support.PropertySourcesPlaceholderConfigurer] - Loading properties file from URL [file:/Users/tianlei/Documents/coin/xn-coin/target/coni-webapp/WEB-INF/classes/application.properties]
+2017-11-01 19:41:35,193 INFO [org.springframework.web.context.ContextLoader] - Root WebApplicationContext: initialization completed in 4234 ms
+2017-11-01 19:41:35,283 INFO [org.springframework.web.servlet.DispatcherServlet] - FrameworkServlet 'mvcServlet': initialization started
+2017-11-01 19:41:35,292 INFO [org.springframework.web.context.support.XmlWebApplicationContext] - Refreshing WebApplicationContext for namespace 'mvcServlet-servlet': startup date [Wed Nov 01 19:41:35 CST 2017]; parent: Root WebApplicationContext
+2017-11-01 19:41:35,295 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from file [/Users/tianlei/Documents/coin/xn-coin/target/coni-webapp/WEB-INF/classes/spring/spring_bo.xml]
+2017-11-01 19:41:35,346 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from file [/Users/tianlei/Documents/coin/xn-coin/target/coni-webapp/WEB-INF/classes/spring/applicationContext.xml]
+2017-11-01 19:41:35,532 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from file [/Users/tianlei/Documents/coin/xn-coin/target/coni-webapp/WEB-INF/classes/spring/spring_quartz.xml]
+2017-11-01 19:41:35,577 INFO [org.springframework.context.support.PropertySourcesPlaceholderConfigurer] - Loading properties file from URL [file:/Users/tianlei/Documents/coin/xn-coin/target/coni-webapp/WEB-INF/classes/application.properties]
+2017-11-01 19:41:35,962 INFO [org.quartz.impl.StdSchedulerFactory] - Using default implementation for ThreadExecutor
+2017-11-01 19:41:35,990 INFO [org.quartz.core.SchedulerSignalerImpl] - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2017-11-01 19:41:35,992 INFO [org.quartz.core.QuartzScheduler] - Quartz Scheduler v.2.2.1 created.
+2017-11-01 19:41:35,995 INFO [org.quartz.simpl.RAMJobStore] - RAMJobStore initialized.
+2017-11-01 19:41:35,996 INFO [org.quartz.core.QuartzScheduler] - Scheduler meta-data: Quartz Scheduler (v2.2.1) 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2017-11-01 19:41:35,996 INFO [org.quartz.impl.StdSchedulerFactory] - Quartz scheduler 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' initialized from an externally provided properties instance.
+2017-11-01 19:41:35,997 INFO [org.quartz.impl.StdSchedulerFactory] - Quartz scheduler version: 2.2.1
+2017-11-01 19:41:36,000 INFO [org.quartz.core.QuartzScheduler] - JobFactory set to: org.springframework.scheduling.quartz.AdaptableJobFactory@6ddbd13b
+2017-11-01 19:41:36,061 INFO [org.springframework.context.support.DefaultLifecycleProcessor] - Starting beans in phase 2147483647
+2017-11-01 19:41:36,061 INFO [org.springframework.scheduling.quartz.SchedulerFactoryBean] - Starting Quartz Scheduler now
+2017-11-01 19:41:36,062 INFO [org.quartz.core.QuartzScheduler] - Scheduler org.springframework.scheduling.quartz.SchedulerFactoryBean#0_$_NON_CLUSTERED started.
+2017-11-01 19:41:36,404 INFO [org.springframework.web.servlet.DispatcherServlet] - FrameworkServlet 'mvcServlet': initialization completed in 1120 ms
+2017-11-01 19:41:36,602 WARN [org.springframework.web.servlet.PageNotFound] - No mapping found for HTTP request with URI [/] in DispatcherServlet with name 'mvcServlet'
+2017-11-01 19:41:36,629 WARN [org.springframework.web.servlet.PageNotFound] - No mapping found for HTTP request with URI [/] in DispatcherServlet with name 'mvcServlet'
+2017-11-01 19:41:36,891 WARN [org.springframework.web.servlet.PageNotFound] - No mapping found for HTTP request with URI [/] in DispatcherServlet with name 'mvcServlet'
+2017-11-01 19:41:46,836 INFO [org.hibernate.validator.internal.util.Version] - HV000001: Hibernate Validator 5.1.1.Final
+2017-11-01 19:42:21,552 INFO [org.springframework.web.context.support.XmlWebApplicationContext] - Closing WebApplicationContext for namespace 'mvcServlet-servlet': startup date [Wed Nov 01 19:41:35 CST 2017]; parent: Root WebApplicationContext
+2017-11-01 19:42:21,554 INFO [org.springframework.context.support.DefaultLifecycleProcessor] - Stopping beans in phase 2147483647
+2017-11-01 19:42:21,559 INFO [org.quartz.core.QuartzScheduler] - Scheduler org.springframework.scheduling.quartz.SchedulerFactoryBean#0_$_NON_CLUSTERED paused.
+2017-11-01 19:42:21,560 INFO [org.springframework.scheduling.quartz.SchedulerFactoryBean] - Shutting down Quartz Scheduler
+2017-11-01 19:42:21,561 INFO [org.quartz.core.QuartzScheduler] - Scheduler org.springframework.scheduling.quartz.SchedulerFactoryBean#0_$_NON_CLUSTERED shutting down.
+2017-11-01 19:42:21,561 INFO [org.quartz.core.QuartzScheduler] - Scheduler org.springframework.scheduling.quartz.SchedulerFactoryBean#0_$_NON_CLUSTERED paused.
+2017-11-01 19:42:21,561 INFO [org.quartz.core.QuartzScheduler] - Scheduler org.springframework.scheduling.quartz.SchedulerFactoryBean#0_$_NON_CLUSTERED shutdown complete.
+2017-11-01 19:42:21,570 INFO [org.springframework.web.context.support.XmlWebApplicationContext] - Closing Root WebApplicationContext: startup date [Wed Nov 01 19:41:31 CST 2017]; root of context hierarchy
+2017-11-01 19:42:53,179 INFO [org.springframework.web.context.ContextLoader] - Root WebApplicationContext: initialization started
+2017-11-01 19:42:53,579 INFO [org.springframework.web.context.support.XmlWebApplicationContext] - Refreshing Root WebApplicationContext: startup date [Wed Nov 01 19:42:53 CST 2017]; root of context hierarchy
+2017-11-01 19:42:53,650 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from URL [file:/Users/tianlei/Documents/coin/xn-coin/target/coni-webapp/WEB-INF/classes/spring/applicationContext.xml]
+2017-11-01 19:42:54,429 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from ServletContext resource [/WEB-INF/conf/spring/service-beans.xml]
+2017-11-01 19:42:54,911 INFO [org.springframework.context.support.PropertySourcesPlaceholderConfigurer] - Loading properties file from URL [file:/Users/tianlei/Documents/coin/xn-coin/target/coni-webapp/WEB-INF/classes/application.properties]
+2017-11-01 19:42:56,946 INFO [org.springframework.web.context.ContextLoader] - Root WebApplicationContext: initialization completed in 3766 ms
+2017-11-01 19:42:57,007 INFO [org.springframework.web.servlet.DispatcherServlet] - FrameworkServlet 'mvcServlet': initialization started
+2017-11-01 19:42:57,011 INFO [org.springframework.web.context.support.XmlWebApplicationContext] - Refreshing WebApplicationContext for namespace 'mvcServlet-servlet': startup date [Wed Nov 01 19:42:57 CST 2017]; parent: Root WebApplicationContext
+2017-11-01 19:42:57,013 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from file [/Users/tianlei/Documents/coin/xn-coin/target/coni-webapp/WEB-INF/classes/spring/spring_bo.xml]
+2017-11-01 19:42:57,029 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from file [/Users/tianlei/Documents/coin/xn-coin/target/coni-webapp/WEB-INF/classes/spring/applicationContext.xml]
+2017-11-01 19:42:57,123 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from file [/Users/tianlei/Documents/coin/xn-coin/target/coni-webapp/WEB-INF/classes/spring/spring_quartz.xml]
+2017-11-01 19:42:57,392 INFO [org.springframework.context.support.PropertySourcesPlaceholderConfigurer] - Loading properties file from URL [file:/Users/tianlei/Documents/coin/xn-coin/target/coni-webapp/WEB-INF/classes/application.properties]
+2017-11-01 19:42:57,958 INFO [org.quartz.impl.StdSchedulerFactory] - Using default implementation for ThreadExecutor
+2017-11-01 19:42:58,024 INFO [org.quartz.core.SchedulerSignalerImpl] - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2017-11-01 19:42:58,025 INFO [org.quartz.core.QuartzScheduler] - Quartz Scheduler v.2.2.1 created.
+2017-11-01 19:42:58,027 INFO [org.quartz.simpl.RAMJobStore] - RAMJobStore initialized.
+2017-11-01 19:42:58,029 INFO [org.quartz.core.QuartzScheduler] - Scheduler meta-data: Quartz Scheduler (v2.2.1) 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2017-11-01 19:42:58,029 INFO [org.quartz.impl.StdSchedulerFactory] - Quartz scheduler 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' initialized from an externally provided properties instance.
+2017-11-01 19:42:58,029 INFO [org.quartz.impl.StdSchedulerFactory] - Quartz scheduler version: 2.2.1
+2017-11-01 19:42:58,032 INFO [org.quartz.core.QuartzScheduler] - JobFactory set to: org.springframework.scheduling.quartz.AdaptableJobFactory@390ec932
+2017-11-01 19:42:58,108 INFO [org.springframework.context.support.DefaultLifecycleProcessor] - Starting beans in phase 2147483647
+2017-11-01 19:42:58,109 INFO [org.springframework.scheduling.quartz.SchedulerFactoryBean] - Starting Quartz Scheduler now
+2017-11-01 19:42:58,109 INFO [org.quartz.core.QuartzScheduler] - Scheduler org.springframework.scheduling.quartz.SchedulerFactoryBean#0_$_NON_CLUSTERED started.
+2017-11-01 19:42:58,891 INFO [org.springframework.web.servlet.DispatcherServlet] - FrameworkServlet 'mvcServlet': initialization completed in 1884 ms
+2017-11-01 19:42:59,351 WARN [org.springframework.web.servlet.PageNotFound] - No mapping found for HTTP request with URI [/] in DispatcherServlet with name 'mvcServlet'
+2017-11-01 19:42:59,376 WARN [org.springframework.web.servlet.PageNotFound] - No mapping found for HTTP request with URI [/] in DispatcherServlet with name 'mvcServlet'
+2017-11-01 19:42:59,495 WARN [org.springframework.web.servlet.PageNotFound] - No mapping found for HTTP request with URI [/] in DispatcherServlet with name 'mvcServlet'
+2017-11-01 19:43:07,038 INFO [org.hibernate.validator.internal.util.Version] - HV000001: Hibernate Validator 5.1.1.Final
