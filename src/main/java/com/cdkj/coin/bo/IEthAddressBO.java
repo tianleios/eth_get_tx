@@ -3,6 +3,7 @@ package com.cdkj.coin.bo;
 import java.util.List;
 
 import com.cdkj.coin.bo.base.IPaginableBO;
+import com.cdkj.coin.bo.base.Paginable;
 import com.cdkj.coin.domain.EthAddress;
 import com.cdkj.coin.dto.req.UploadEthAddressReq;
 import com.cdkj.coin.dto.res.UploadEthAddressRes;
@@ -18,19 +19,21 @@ public interface IEthAddressBO extends IPaginableBO<EthAddress> {
     //上传地址
     public UploadEthAddressRes uploadAddress(UploadEthAddressReq req);
 
-
     //
     public int saveEthAddress(EEthAddressType type, String userId,
             String address, String password);
 
+    //
+    public Paginable<EthAddress> queryPageByStatusList(List<String> statusList, int start, int limit);
+
     public List<EthAddress> queryEthAddressList(EthAddress condition);
 
-    public List<EthAddress> queryMEthAddressList();
+//    public List<EthAddress> queryMEthAddressList();
 
-    public EthAddress getEthAddress(Long id);
+//    public EthAddress getEthAddress(Long id);
 
     public EthAddress getEthAddress(EEthAddressType type, String address);
 
-    public EthAddress getEthAddressByUserId(String userId);
+//    public EthAddress getEthAddressByUserId(String userId);
 
 }

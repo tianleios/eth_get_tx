@@ -8,6 +8,8 @@
  */
 package com.cdkj.coin.dto.req;
 
+import org.hibernate.validator.constraints.NotBlank;
+
 import java.io.Serializable;
 
 /** 
@@ -27,8 +29,10 @@ public abstract class APageReq implements Serializable {
     // 创建终止时间(YYYY-MM-DD)
     private String dateEnd;
 
+    @NotBlank
     private String start;
 
+    @NotBlank
     private String limit;
 
     private String orderColumn;// 分页字段

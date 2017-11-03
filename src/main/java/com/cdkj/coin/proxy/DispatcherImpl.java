@@ -32,7 +32,7 @@ public class DispatcherImpl implements IDispatcher {
             }
             rm.setData(data);
         } catch (Exception e) {
-            if (e instanceof BizException) {
+                if (e instanceof BizException) {
                 rm.setErrorCode(EErrorCode.BIZ_ERR.getCode());
                 rm.setErrorInfo(((BizException) e).getErrorMessage());
                 rm.setData("");

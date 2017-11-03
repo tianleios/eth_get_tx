@@ -2,6 +2,9 @@ package com.cdkj.coin.dao;
 
 import com.cdkj.coin.dao.base.IBaseDAO;
 import com.cdkj.coin.domain.EthAddress;
+import com.cdkj.coin.domain.EthTransaction;
+
+import java.util.List;
 
 public interface IEthAddressDAO extends IBaseDAO<EthAddress> {
 
@@ -9,4 +12,8 @@ public interface IEthAddressDAO extends IBaseDAO<EthAddress> {
 
 	@Override
 	Long selectTotalCount(EthAddress condition);
+
+//	@Override
+//	List<EthTransaction> selectListByStatusList(List<String> statusList, String start, String limit);
+
 }

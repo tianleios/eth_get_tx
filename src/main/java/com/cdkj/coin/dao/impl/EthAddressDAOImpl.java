@@ -2,6 +2,7 @@ package com.cdkj.coin.dao.impl;
 
 import java.util.List;
 
+import com.cdkj.coin.domain.EthTransaction;
 import org.springframework.stereotype.Repository;
 
 import com.cdkj.coin.dao.IEthAddressDAO;
@@ -37,6 +38,19 @@ public class EthAddressDAOImpl extends AMybatisTemplate implements IEthAddressDA
 		return super.select(NAMESPACE.concat("select_ethAddress"), condition,EthAddress.class);
 	}
 
+	@Override
+	protected void insertBatch(String statement, List<Object> list) {
+
+		super.insertBatch(NAMESPACE.concat("insertBatch"), list);
+
+	}
+
+	//	@Override
+//	public List<EthTransaction> selectListByStatusList(List<String> statusList, String start, String limit) {
+//
+//		return super.sel
+//
+//	}
 
 	@Override
 	public List<EthAddress> selectList(EthAddress condition) {

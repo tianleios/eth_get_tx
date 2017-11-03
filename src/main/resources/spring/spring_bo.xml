@@ -20,6 +20,14 @@
 	
 	<bean id="sysConfigBO" class="com.cdkj.coin.bo.impl.SYSConfigBOImpl">
 		<property name="paginableDAO" ref="sysConfigDAOImpl"/>
-	</bean>	
-	
+	</bean>
+
+	<bean id="ethTransactionBO" class="com.cdkj.coin.bo.impl.EthTransactionBOImpl">
+		<property name="paginableDAO" ref="ethTransactionDAOImpl"/>
+	</bean>
+
+	<bean id="ethAddressBO" class="com.cdkj.coin.bo.impl.EthAddressBOImpl">
+		<property name="paginableDAO" ref="ethAddressDAOImpl"/>
+	</bean>
+
 </beans>

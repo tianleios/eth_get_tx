@@ -13,8 +13,11 @@ import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.cdkj.coin.bo.base.Paginable;
 import com.cdkj.coin.common.JsonUtil;
 import com.cdkj.coin.domain.EthTransaction;
+import com.cdkj.coin.dto.req.UploadEthAddressReq;
+import com.cdkj.coin.dto.res.UploadEthAddressRes;
 import com.cdkj.coin.enums.*;
 import com.cdkj.coin.http.BizConnecter;
 import org.apache.commons.lang3.StringUtils;
@@ -56,6 +59,32 @@ public class EthAddressAOImpl implements IEthAddressAO {
 
     @Autowired
     private ISYSConfigBO sysConfigBO;
+
+    @Override
+    public UploadEthAddressRes uploadAddress(UploadEthAddressReq req) {
+
+        UploadEthAddressRes res = this.ethAddressBO.uploadAddress(req);
+        return res;
+
+    }
+
+    @Override
+    public List<EthAddress> queryEthAddressListByAddress(String address) {
+
+        EthAddress condition = new EthAddress();
+        condition.setAddress(address);
+        return   this.ethAddressBO.queryEthAddressList(condition);
+    }
+
+    @Override
+    public Paginable<EthAddress> queryEthAddressPageByStatusList(List<String> statusList, int start, int limit){
+
+//        this.ethAddressBO.get
+        // 是否在 次 就完成分页工作
+        return this.ethAddressBO.queryPageByStatusList(statusList,start,limit);
+
+    }
+
 
     @Override
     public void doEthTransactionSync() {
@@ -156,6 +185,7 @@ public class EthAddressAOImpl implements IEthAddressAO {
 
     }
 
+    //时间调度
     public void pushTx() {
 
         EthTransaction con = new EthTransaction();
@@ -164,8 +194,8 @@ public class EthAddressAOImpl implements IEthAddressAO {
         if (txs.size() > 0) {
 
             //连接另外的 biz
-            BizConnecter.getBizData("002000", JsonUtil.object2Json(req),
-                    Object.class);
+//            BizConnecter.getBizData("002000", JsonUtil.object2Json(req),
+//                    Object.class);
             //推送出去
         }
 

@@ -3,6 +3,7 @@ package com.cdkj.coin.bo.impl;
 import java.util.Date;
 import java.util.List;
 
+import com.cdkj.coin.bo.base.Paginable;
 import com.cdkj.coin.core.OrderNoGenerater;
 import com.cdkj.coin.dto.req.UploadEthAddressReq;
 import com.cdkj.coin.dto.res.UploadEthAddressRes;
@@ -43,27 +44,27 @@ public class EthAddressBOImpl extends PaginableBOImpl<EthAddress> implements
         return ethAddressDAO.selectList(condition);
     }
 
-    @Override
-    public List<EthAddress> queryMEthAddressList() {
-        EthAddress condition = new EthAddress();
-        condition.setType(EEthAddressType.M.getCode());
-//        condition.setStatus(EEthAddressStatus.NORMAL.getCode());
-        return ethAddressDAO.selectList(condition);
-    }
+//    @Override
+//    public List<EthAddress> queryMEthAddressList() {
+//        EthAddress condition = new EthAddress();
+//        condition.setType(EEthAddressType.M.getCode());
+////        condition.setStatus(EEthAddressStatus.NORMAL.getCode());
+//        return ethAddressDAO.selectList(condition);
+//    }
 
-    @Override
-    public EthAddress getEthAddress(Long id) {
-        EthAddress data = null;
-        if (id != null) {
-            EthAddress condition = new EthAddress();
-//            condition.setId(id);
-            data = ethAddressDAO.select(condition);
-            if (data == null) {
-                throw new BizException("xn0000", "以太坊地址不存在");
-            }
-        }
-        return data;
-    }
+//    @Override
+//    public EthAddress getEthAddress(Long id) {
+//        EthAddress data = null;
+//        if (id != null) {
+//            EthAddress condition = new EthAddress();
+////            condition.setId(id);
+//            data = ethAddressDAO.select(condition);
+//            if (data == null) {
+//                throw new BizException("xn0000", "以太坊地址不存在");
+//            }
+//        }
+//        return data;
+//    }
 
     @Override
     public EthAddress getEthAddress(EEthAddressType type, String address) {
@@ -77,19 +78,6 @@ public class EthAddressBOImpl extends PaginableBOImpl<EthAddress> implements
         }
         return data;
     }
-
-    @Override
-    public EthAddress getEthAddressByUserId(String userId) {
-        EthAddress data = null;
-        EthAddress condition = new EthAddress();
-//        condition.setUserId(userId);
-        List<EthAddress> results = ethAddressDAO.selectList(condition);
-        if (CollectionUtils.isNotEmpty(results)) {
-            data = results.get(0);
-        }
-        return data;
-    }
-
 
     @Override
     public UploadEthAddressRes uploadAddress(UploadEthAddressReq req) {
@@ -115,6 +103,15 @@ public class EthAddressBOImpl extends PaginableBOImpl<EthAddress> implements
         EthAddress selectedAddress = new EthAddress();
         selectedAddress.setAddress(address);
         return  this.ethAddressDAO.selectTotalCount(selectedAddress);
+
+    }
+
+    @Override
+    public Paginable<EthAddress> queryPageByStatusList(List<String> statusList,int start,int limit) {
+
+       //condation 转换为List
+        EthAddress condation = new EthAddress();
+        return this.getPaginable(start,limit,condation);
 
     }
 

@@ -27,14 +27,10 @@
 
 	<select id="select_ethAddress" parameterType="ethAddress" resultMap="ethAddress_DB_Result">
 		SELECT
-		t.id
+		t.code
 		,t.type
 		,t.address
-		,t.password
-		,t.user_id
-		,t.status
 		,t.create_datetime
-		,t.update_datetime
 		FROM
 		tcoin_eth_address t
 		<include refid="where_condition" />

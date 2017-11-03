@@ -23,6 +23,12 @@
 			<if test="status != null and status != '' ">
 				AND t.status = #{status}
 			</if>
+			<if test="from != null and from != ''">
+				 t.from = #{from} OR
+			</if>
+			<if test="to != null and to != ''">
+				 t.to = #{to}
+			</if>
 		</trim>
 	</sql>
 
@@ -41,7 +47,6 @@
 		<include refid="ethTx"/>
 
 		FROM
-
 		tcoin_eth_transaction t
 		<include refid="where_condition" />
 		<trim prefix="ORDER BY ">
@@ -68,6 +73,24 @@
 			,#{to},#{value},#{gasPrice},#{gas},#{blockCreateDatetime},now(),
 			#{status}
 		)
+	</insert>
+
+	<insert id="insertTxList" parameterType="List">
+
+		INSERT INTO
+			`tcoin_eth_transaction`(`hash`, nonce, block_hash, block_number,transaction_index,`from`,`to`,`value`,gas_price,gas,
+									block_create_datetime,sync_datetime,`status`)
+		VALUES
+
+		  <foreach collection="list" item="tx" separator=",">
+			  (
+			  #{tx.hash} ,#{tx.nonce} ,#{tx.blockHash} ,#{tx.blockNumber} ,#{tx.transactionIndex} ,
+			  #{tx.from}
+			  ,#{tx.to},#{tx.value},#{tx.gasPrice},#{tx.gas},#{tx.blockCreateDatetime},now(),
+			  #{tx.status}
+			  )
+		  </foreach>
+
 	</insert>
 
 

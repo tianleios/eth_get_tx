@@ -1,6 +1,7 @@
 package com.cdkj.coin.base;
 
 import java.math.BigInteger;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -67,7 +68,7 @@ public class ISysDictDAOTest extends ADAOTest {
 
 
         EthTransaction transaction = new EthTransaction();
-        transaction.setHash("0xss");
+        transaction.setHash("0x11eee111qq1333323211111131");
         transaction.setNonce(new BigInteger(String.valueOf(121)));
 
         transaction.setBlockHash("0xss");
@@ -84,9 +85,35 @@ public class ISysDictDAOTest extends ADAOTest {
         //
         transaction.setStatus("0");
         transaction.setBlockCreateDatetime(new Date());
-//        transaction.setSyncDatetime(); db set
+        //--//
+        List txList = new ArrayList();
+        txList.add(transaction);
 
-        this.ethTransactionDAO.insert(transaction);
+        {
+
+            EthTransaction tx = new EthTransaction();
+            tx.setHash("0x1111111eee444331111132323www31");
+            tx.setNonce(new BigInteger(String.valueOf(121)));
+
+            tx.setBlockHash("0xss");
+            tx.setBlockNumber("0xss");
+            tx.setTransactionIndex(new BigInteger(String.valueOf(121)));
+
+            tx.setFrom("0xss");
+            tx.setTo("0xss");
+
+            tx.setValue("0xss");
+            tx.setGasPrice("0xss");
+            tx.setGas(new BigInteger(String.valueOf(121)));
+
+            //
+            tx.setStatus("0");
+            tx.setBlockCreateDatetime(new Date());
+            txList.add(tx);
+        }
+
+        this.ethTransactionDAO.insertTxList(txList);
+//        this.ethTransactionDAO.insert(transaction);
 
     }
 

@@ -23,6 +23,12 @@
 			<if test="status != null and status != '' ">
 				AND t.status = #{status}
 			</if>
+			<if test="from != null and from != ''">
+				 t.from = #{from} OR
+			</if>
+			<if test="to != null and to != ''">
+				 t.to = #{to}
+			</if>
 		</trim>
 	</sql>
 
@@ -41,7 +47,6 @@
 		<include refid="ethTx"/>
 
 		FROM
-
 		tcoin_eth_transaction t
 		<include refid="where_condition" />
 		<trim prefix="ORDER BY ">

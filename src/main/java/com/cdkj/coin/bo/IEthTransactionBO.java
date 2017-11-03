@@ -19,14 +19,19 @@ public interface IEthTransactionBO extends IPaginableBO<EthTransaction> {
 
     //改变 交易状态 为以推送
     public void changeTxStatusToPushed(String txHash);
+    public void changeTxStatusToPushed(List<String> txHashList);
+
+    public void insertTxList(List<EthTransaction> txList);
+
 
     //
     public int saveEthTransaction(EthTransaction tx);
+    public void saveEthTransactionList(List<EthTransaction> txList);
 
+    //
     public List<EthTransaction> queryEthTransactionList(EthTransaction condition);
+
 
     public EthTransaction getEthTransaction(String hash);
 
-    public String customTxByWalletFile(String from, String fromPassword,
-            String to, BigInteger amount);
 }

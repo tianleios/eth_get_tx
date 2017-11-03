@@ -1,7 +1,6 @@
 package com.cdkj.coin.api.impl;
 
-import com.cdkj.coin.ao.IAddressAO;
-import com.cdkj.coin.ao.ISYSConfigAO;
+import com.cdkj.coin.ao.IEthAddressAO;
 import com.cdkj.coin.api.AProcessor;
 import com.cdkj.coin.core.ObjValidater;
 import com.cdkj.coin.dto.req.UploadEthAddressReq;
@@ -15,8 +14,8 @@ import com.cdkj.coin.spring.SpringContextHolder;
  */
 public class XN616000 extends AProcessor {
 
-    private IAddressAO addressAO = SpringContextHolder
-            .getBean(IAddressAO.class);
+    private IEthAddressAO addressAO = SpringContextHolder
+            .getBean(IEthAddressAO.class);
 
     private UploadEthAddressReq req;
 
@@ -30,8 +29,9 @@ public class XN616000 extends AProcessor {
     @Override
     public void doCheck(String inputparams) throws ParaException {
 
-         req = JsonUtil.json2Bean(inputparams,UploadEthAddressReq.class);
+        req = JsonUtil.json2Bean(inputparams,UploadEthAddressReq.class);
         ObjValidater.validateReq(req);
 
     }
+
 }

@@ -28,6 +28,11 @@ public class ObjValidater {
 //    jsr 验证
     static public <T> void validateReq(T req) {
 
+        if (req == null) {
+
+            throw new BizException("xn702000", "req 为null");
+
+        }
         Set<ConstraintViolation<T>> set = validator.validate(req);
         // default is ""
         StringBuilder stringBuilder = new StringBuilder("");

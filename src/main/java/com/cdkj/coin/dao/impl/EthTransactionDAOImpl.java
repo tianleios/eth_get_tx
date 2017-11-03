@@ -25,8 +25,12 @@ public class EthTransactionDAOImpl extends AMybatisTemplate implements IEthTrans
 		return super.insert(NAMESPACE.concat("insertEthTransaction"), data);
 	}
 
+	@Override
+	public void insertTxList(List<EthTransaction> txList) {
+		 super.insertBatch(NAMESPACE.concat("insertTxList"),(List)txList);
+	}
 
-//
+	//
 	@Override
 	public int delete(EthTransaction data) {
 		return super.delete(NAMESPACE.concat("delete_ethTransaction"), data);

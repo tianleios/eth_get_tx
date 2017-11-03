@@ -79,6 +79,13 @@ public class EthTransactionBOImpl extends PaginableBOImpl<EthTransaction>
     }
 
     @Override
+    public void saveEthTransactionList(List<EthTransaction> txList) {
+
+         this.ethTransactionDAO.insertTxList(txList);
+
+    }
+
+    @Override
     public List<EthTransaction> queryEthTransactionList(EthTransaction condition) {
         return ethTransactionDAO.selectList(condition);
     }
@@ -104,6 +111,18 @@ public class EthTransactionBOImpl extends PaginableBOImpl<EthTransaction>
     }
 
     @Override
+    public void changeTxStatusToPushed(List<String> txHashList) {
+
+//        this.ethTransactionDAO.updatetxStatus
+
+    }
+
+    @Override
+    public void insertTxList(List<EthTransaction> txList) {
+        this.ethTransactionDAO.insertTxList(txList);
+    }
+
+    @Override
     public EthTransaction getEthTransaction(String hash) {
         EthTransaction data = null;
         if (StringUtils.isNotBlank(hash)) {
@@ -117,65 +136,7 @@ public class EthTransactionBOImpl extends PaginableBOImpl<EthTransaction>
         return data;
     }
 
-    @Override
-    public String customTxByWalletFile(String from, String fromPassword,
-            String to, BigInteger amount) {
-        String txHash = null;
-        try {
-            String fileDirPath = "/Users/haiqingzheng/Desktop/ethereum/beikeying/data/keystore";
-            File keyStoreFileDir = new File(fileDirPath);
-            File[] subFiles = keyStoreFileDir.listFiles();
-            File keystoreFile = null;
-            for (File file : subFiles) {
-                if (file.isDirectory() != true) {
-                    // from: 0x244eb6078add0d58b2490ae53976d80f54a404ae
-                    if (file.getName().endsWith(from.substring(2))) {
-                        // 找到了该文件
-                        keystoreFile = file;
-                        break;
-                    }
-                }
-            }
 
-            if (keystoreFile == null) {
-                throw new Exception("未找到文件");
-            }
-
-            //
-            Credentials credentials = WalletUtils.loadCredentials(fromPassword,
-                keystoreFile);
-            //
-            EthGetTransactionCount ethGetTransactionCount = web3j
-                .ethGetTransactionCount(from, DefaultBlockParameterName.LATEST)
-                .sendAsync().get();
-            //
-            BigInteger nonce = ethGetTransactionCount.getTransactionCount();
-            // TODO 动态获取
-            BigInteger gasLimit = BigInteger.valueOf(30000);
-            BigInteger gasPrice = web3j.ethGasPrice().send().getGasPrice();
-
-            // 本地签名的
-            RawTransaction rawTransaction = RawTransaction.createTransaction(
-                nonce, gasPrice, gasLimit, to, amount, "121312");
-
-            // 签名
-            byte[] signedMessage = TransactionEncoder.signMessage(
-                rawTransaction, credentials);
-            txHash = Numeric.toHexString(signedMessage);
-            EthSendTransaction ethSendTransaction = web3j
-                .ethSendRawTransaction(txHash).sendAsync().get();
-
-            if (ethSendTransaction.getError() != null) {
-                // failure
-            }
-
-        } catch (Exception e) {
-            throw new BizException("xn625000", "交易广播异常" + e.getMessage());
-        }
-        return txHash;
-        // success
-
-    }
 
 
 

@@ -4,6 +4,7 @@ import com.cdkj.coin.ao.IEthTxAO;
 import com.cdkj.coin.bo.IEthAddressBO;
 import com.cdkj.coin.bo.IEthTransactionBO;
 import com.cdkj.coin.bo.ISYSConfigBO;
+import com.cdkj.coin.bo.base.Paginable;
 import com.cdkj.coin.common.JsonUtil;
 import com.cdkj.coin.common.SysConstants;
 import com.cdkj.coin.domain.EthTransaction;
@@ -47,6 +48,14 @@ public class EthTxAOImpl implements IEthTxAO {
     @Autowired
     private ISYSConfigBO sysConfigBO;
 
+    @Override
+    public Paginable<EthTransaction> queryTxPage(String start, String limit, String from, String to) {
+        //
+        EthTransaction condation = new EthTransaction();
+        condation.setFrom(from);
+        condation.setTo(to);
+        return this.ethTransactionBO.getPaginable(Integer.valueOf(start),Integer.valueOf(limit),condation);
+    }
 
     @Override
     public void doEthTransactionSync() {
@@ -97,7 +106,6 @@ public class EthTxAOImpl implements IEthTxAO {
 
                     if (StringUtils.isNotBlank(toAddress)) {
 
-
                         // 查询改地址是否在我们系统中存在
                         // to 或者 from 为我们的地址就要进行同步
                         long toCount = ethAddressBO.addressCount(toAddress);
@@ -110,10 +118,12 @@ public class EthTxAOImpl implements IEthTxAO {
 
                     }
 
-                    // 存储
-                    this.saveToDB(transactionList, blockNumber);
+
 
                 }
+
+                // 存储
+                this.saveToDB(transactionList, blockNumber);
 
             }
 
@@ -143,16 +153,17 @@ public class EthTxAOImpl implements IEthTxAO {
                 ESystemCode.COIN.getCode());
         //
         sysConfigBO.refreshSYSConfig(config.getId(),
-                String.valueOf(blockNumber + 1), "code", "当前扫描至哪个区块");
+                String.valueOf(blockNumber + 1), "code", "下次从哪个区块开始扫描");
 
     }
 
 
+    //时间调度任务
     public void pushTx() {
 
         EthTransaction con = new EthTransaction();
         con.setStatus(EPushStatus.UN_PUSH.getCode());
-        List<EthTransaction> txs = this.ethTransactionBO.queryEthTxPage(con, 1, 20);
+        List<EthTransaction> txs = this.ethTransactionBO.queryEthTxPage(con, 0, 30);
         if (txs.size() > 0) {
 
             //推送出去
@@ -175,5 +186,7 @@ public class EthTxAOImpl implements IEthTxAO {
         return new Object();
 
     }
+
+
 
 }

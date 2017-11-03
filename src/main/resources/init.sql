@@ -10,6 +10,6 @@ CREATE TABLE `tsys_config` (
 ) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 
 
-insert INTO `tsys_config`(type, ckey, cvalue, updater, update_datetime, remark)
+insert INTO `tsys_config`(type, ckey, cvalue, updater, update_datetime, remark, system_code,company_code)
 VALUES
-  ('0','curBlockNumber','4443761','code',now(),'扫描区块');
+  ('0','curBlockNumber','4443761','code',now(),'下次从哪个区块开始扫描','CD-COIN000017','CD-COIN000017');
