@@ -23,6 +23,12 @@
 			<if test="status != null and status != '' ">
 				AND t.status = #{status}
 			</if>
+			<if test="blockCreateDatetimeStart != null and blockCreateDatetimeStart != ''">
+			    AND t.block_create_datetime >= #{blockCreateDatetimeStart}
+			</if>
+			<if test="blockCreateDatetimeEnd != null and blockCreateDatetimeEnd != ''">
+				<![CDATA[ AND t.block_create_datetime <= #{blockCreateDatetimeEnd}  ]]>
+			</if>
 			<if test="from != null and from != ''">
 				 t.from = #{from} OR
 			</if>
@@ -38,7 +44,10 @@
 	</sql>
 
 	<update id="updateTxStatus" parameterType="com.cdkj.coin.domain.EthTransaction">
-		UPDATE  tcoin_eth_transaction SET `status` = #{status} where `hash` = #{hash}
+		UPDATE  tcoin_eth_transaction SET `status` = '1' where `hash` in
+		<foreach collection="list" item="tx" open="(" separator="," close=")">
+			#{tx.hash}
+		</foreach>
 	</update>
 
 	<select id="select_ethTransaction" parameterType="ethTransaction" resultMap="ethTransaction_DB_Result">
@@ -84,15 +93,13 @@
 
 		  <foreach collection="list" item="tx" separator=",">
 			  (
-			  #{tx.hash} ,#{tx.nonce} ,#{tx.blockHash} ,#{tx.blockNumber} ,#{tx.transactionIndex} ,
-			  #{tx.from}
+			  #{tx.hash} ,#{tx.nonce} ,#{tx.blockHash} ,#{tx.blockNumber} ,
+			  #{tx.transactionIndex} ,#{tx.from}
 			  ,#{tx.to},#{tx.value},#{tx.gasPrice},#{tx.gas},#{tx.blockCreateDatetime},now(),
 			  #{tx.status}
 			  )
 		  </foreach>
 
 	</insert>
-
-
 
 </mapper>

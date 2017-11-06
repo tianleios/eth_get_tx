@@ -13,6 +13,7 @@
 
 	<sql id="where_condition">
 		<trim prefix="WHERE" prefixOverrides="AND | OR">
+
 			<if test="code != null and code != '' ">
 				AND t.code = #{code}
 			</if>
@@ -21,6 +22,12 @@
 			</if>
 			<if test="address != null and address != '' ">
 				AND t.address = #{address}
+			</if>
+			<if test="typeList != null and typeList != '' ">
+				AND t.type in
+				<foreach collection="typeList"  item="type" open="(" separator="," close=")">
+					#{type}
+				</foreach>
 			</if>
 		</trim>
 	</sql>
@@ -68,21 +75,6 @@
 	</select>
 
 
-	<!--<insert id="insert" parameterType="com.cdkj.coin.domain.EthAddress">-->
 
-		<!--INSERT INTO-->
-			<!--tcoin_eth_address(-->
-				<!--code,-->
-				<!--type,-->
-				<!--address,-->
-				<!--create_datetime-->
-			<!--)-->
-		<!--VALUES(-->
-			<!--#{code},-->
-			<!--#{type},-->
-			<!--#{address},-->
-			<!--#{createDatetime}-->
-		<!--)	-->
-	<!--</insert>-->
 
 </mapper>

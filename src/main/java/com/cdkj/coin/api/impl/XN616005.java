@@ -3,7 +3,6 @@ package com.cdkj.coin.api.impl;
 import com.cdkj.coin.ao.IEthAddressAO;
 import com.cdkj.coin.api.AProcessor;
 import com.cdkj.coin.common.JsonUtil;
-import com.cdkj.coin.common.StringUtil;
 import com.cdkj.coin.core.ObjValidater;
 import com.cdkj.coin.dto.req.AddressPageReq;
 import com.cdkj.coin.exception.BizException;
@@ -20,7 +19,7 @@ public class XN616005 extends AProcessor {
 
     AddressPageReq req;
 
-
+    //分页查地址
     @Override
     public void doCheck(String inputparams) throws ParaException {
 
@@ -33,7 +32,7 @@ public class XN616005 extends AProcessor {
     @Override
     public Object doBusiness() throws BizException {
 
-     return  this.addressAO.queryEthAddressPageByStatusList(req.getStatusList(),Integer.valueOf(req.getStart()).intValue(),Integer.valueOf(req.getLimit()).intValue());
+     return  this.addressAO.queryEthAddressPageByStatusList(req.getTypeList(),Integer.valueOf(req.getStart()).intValue(),Integer.valueOf(req.getLimit()).intValue());
 
     }
 

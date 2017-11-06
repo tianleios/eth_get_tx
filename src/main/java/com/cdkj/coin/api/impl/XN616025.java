@@ -4,7 +4,7 @@ import com.cdkj.coin.ao.IEthTxAO;
 import com.cdkj.coin.api.AProcessor;
 import com.cdkj.coin.common.JsonUtil;
 import com.cdkj.coin.core.ObjValidater;
-import com.cdkj.coin.dto.req.TxPageReq;
+import com.cdkj.coin.dto.req.EthTxPageReq;
 import com.cdkj.coin.exception.BizException;
 import com.cdkj.coin.exception.ParaException;
 import com.cdkj.coin.spring.SpringContextHolder;
@@ -17,12 +17,12 @@ public class XN616025 extends AProcessor {
     private IEthTxAO ethTxAO = SpringContextHolder
             .getBean(IEthTxAO.class);
 
-    private TxPageReq req;
+    private EthTxPageReq req;
 
     @Override
     public void doCheck(String inputparams) throws ParaException {
 
-        req = JsonUtil.json2Bean(inputparams,TxPageReq.class);
+        req = JsonUtil.json2Bean(inputparams,EthTxPageReq.class);
         ObjValidater.validateReq(req);
 
     }
@@ -30,7 +30,7 @@ public class XN616025 extends AProcessor {
     @Override
     public Object doBusiness() throws BizException {
 
-     return  this.ethTxAO.queryTxPage(req.getStart(),req.getLimit(),req.getFrom(),req.getTo());
+     return  this.ethTxAO.queryTxPage(req);
 
     }
 }

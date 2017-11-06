@@ -4,6 +4,7 @@ import java.io.File;
 import java.math.BigInteger;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -40,7 +41,6 @@ public class EthTransactionBOImpl extends PaginableBOImpl<EthTransaction>
 
     @Autowired
     private IEthTransactionDAO ethTransactionDAO;
-
 
     @Override
     public EthTransaction convertTx(EthBlock.TransactionObject tx,BigInteger timestamp)   {
@@ -97,23 +97,19 @@ public class EthTransactionBOImpl extends PaginableBOImpl<EthTransaction>
     }
 
     @Override
-    public void changeTxStatusToPushed(String txHash) {
-
-        EthTransaction ethTransaction = new EthTransaction();
-        ethTransaction.setHash(txHash);
-        ethTransaction.setStatus(EPushStatus.PUSHED.getCode());
-
-      int cout = this.ethTransactionDAO.updateTxStatus(ethTransaction);
-      if (cout <= 0) {
-          throw new BizException(BizErrorCode.PUSH_STATUS_UPDATE_FAILURE.getErrorCode(),txHash + BizErrorCode.PUSH_STATUS_UPDATE_FAILURE.getErrorInfo());
-      }
-
-    }
-
-    @Override
     public void changeTxStatusToPushed(List<String> txHashList) {
 
-//        this.ethTransactionDAO.updatetxStatus
+        List<EthTransaction> txList = new ArrayList();
+
+        txHashList.forEach(hash -> {
+
+            EthTransaction ethTransaction = new EthTransaction();
+            ethTransaction.setHash(hash);
+            txList.add(ethTransaction);
+        });
+
+      this.ethTransactionDAO.updateTxStatus(txList);
+
 
     }
 
@@ -135,10 +131,5 @@ public class EthTransactionBOImpl extends PaginableBOImpl<EthTransaction>
         }
         return data;
     }
-
-
-
-
-
 
 }

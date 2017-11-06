@@ -5,17 +5,17 @@ import com.cdkj.coin.bo.IEthAddressBO;
 import com.cdkj.coin.bo.IEthTransactionBO;
 import com.cdkj.coin.bo.ISYSConfigBO;
 import com.cdkj.coin.bo.base.Paginable;
-import com.cdkj.coin.common.JsonUtil;
+import com.cdkj.coin.common.DateUtil;
 import com.cdkj.coin.common.SysConstants;
 import com.cdkj.coin.domain.EthTransaction;
 import com.cdkj.coin.domain.SYSConfig;
+import com.cdkj.coin.dto.req.EthTxPageReq;
 import com.cdkj.coin.enums.EPushStatus;
 import com.cdkj.coin.enums.ESystemCode;
 import com.cdkj.coin.eth.Web3JClient;
 import com.cdkj.coin.exception.BizErrorCode;
 import com.cdkj.coin.exception.BizException;
 import org.apache.commons.lang3.StringUtils;
-import org.apache.log4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -26,6 +26,7 @@ import org.web3j.protocol.core.methods.response.EthBlock;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -49,12 +50,37 @@ public class EthTxAOImpl implements IEthTxAO {
     private ISYSConfigBO sysConfigBO;
 
     @Override
-    public Paginable<EthTransaction> queryTxPage(String start, String limit, String from, String to) {
+    public Paginable<EthTransaction> queryTxPage(EthTxPageReq req) {
+
         //
         EthTransaction condation = new EthTransaction();
-        condation.setFrom(from);
-        condation.setTo(to);
-        return this.ethTransactionBO.getPaginable(Integer.valueOf(start),Integer.valueOf(limit),condation);
+        condation.setStatus(req.getStatus());
+        condation.setTo(req.getTo());
+        condation.setFrom(req.getFrom());
+
+        //时间
+        Date startDate = null;
+        Date endDate = null;
+
+        if (req.getBlockCreateDatetimeStart() != null) {
+             startDate = DateUtil.strToDate(req.getBlockCreateDatetimeStart(),DateUtil.DATA_TIME_PATTERN_1);
+        }
+
+        if (req.getBlockCreateDatetimeEnd() != null) {
+            endDate = DateUtil.strToDate(req.getBlockCreateDatetimeEnd(),DateUtil.DATA_TIME_PATTERN_1);
+        }
+
+        if (startDate != null && endDate != null) {
+            if (startDate.compareTo(endDate) > 0) {
+                throw new  BizException(BizErrorCode.DEFAULT_ERROR_CODE.getErrorCode(),"开始时间需 <= 结束时间");
+            }
+
+        }
+
+        condation.setBlockCreateDatetimeStart(startDate);
+        condation.setBlockCreateDatetimeEnd(endDate);
+
+        return this.ethTransactionBO.getPaginable(Integer.valueOf(req.getStart()),Integer.valueOf(req.getLimit()),condation);
     }
 
     @Override
@@ -66,7 +92,6 @@ public class EthTxAOImpl implements IEthTxAO {
 
                 Long blockNumber = sysConfigBO
                         .getLongValue(SysConstants.CUR_BLOCK_NUMBER);
-
                 System.out.println("*********同步循环开始，扫描区块" + blockNumber
                         + "*******");
 
@@ -82,7 +107,6 @@ public class EthTxAOImpl implements IEthTxAO {
                 EthBlock.Block block = ethBlockResp.getResult();
 
                 // 如果取到区块信息
-/**/
                 List<EthTransaction> transactionList = new ArrayList<>();
 
                 if (block == null) {
@@ -117,11 +141,7 @@ public class EthTxAOImpl implements IEthTxAO {
                         }
 
                     }
-
-
-
                 }
-
                 // 存储
                 this.saveToDB(transactionList, blockNumber);
 
@@ -147,16 +167,14 @@ public class EthTxAOImpl implements IEthTxAO {
 
         }
 
-        //修改 区块遍历 信息
+        //修改_区块遍历信息
         SYSConfig config = sysConfigBO.getSYSConfig(
-                SysConstants.CUR_BLOCK_NUMBER, ESystemCode.COIN.getCode(),
-                ESystemCode.COIN.getCode());
+                SysConstants.CUR_BLOCK_NUMBER);
         //
         sysConfigBO.refreshSYSConfig(config.getId(),
                 String.valueOf(blockNumber + 1), "code", "下次从哪个区块开始扫描");
 
     }
-
 
     //时间调度任务
     public void pushTx() {
@@ -177,16 +195,10 @@ public class EthTxAOImpl implements IEthTxAO {
             throw new BizException(BizErrorCode.PUSH_STATUS_UPDATE_FAILURE.getErrorCode(), "请传入正确的json数组" + BizErrorCode.PUSH_STATUS_UPDATE_FAILURE.getErrorCode());
         }
 
-        for (String hash: hashList) {
-
-            this.ethTransactionBO.changeTxStatusToPushed(hash);
-
-        }
+        this.ethTransactionBO.changeTxStatusToPushed(hashList);
 
         return new Object();
 
     }
-
-
 
 }

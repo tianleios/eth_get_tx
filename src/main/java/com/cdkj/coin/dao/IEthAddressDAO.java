@@ -13,7 +13,6 @@ public interface IEthAddressDAO extends IBaseDAO<EthAddress> {
 	@Override
 	Long selectTotalCount(EthAddress condition);
 
-//	@Override
-//	List<EthTransaction> selectListByStatusList(List<String> statusList, String start, String limit);
+
 
 }

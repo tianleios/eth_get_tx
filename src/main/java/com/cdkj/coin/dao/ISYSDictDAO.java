@@ -19,6 +19,6 @@ import com.cdkj.coin.domain.SYSDict;
 public interface ISYSDictDAO extends IBaseDAO<SYSDict> {
     String NAMESPACE = ISYSDictDAO.class.getName().concat(".");
 
-    public int update(SYSDict data);
+    public int updateValue(SYSDict data);
 
 }

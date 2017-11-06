@@ -14,9 +14,9 @@ import com.cdkj.coin.domain.EthTransaction;
 public class EthTransactionDAOImpl extends AMybatisTemplate implements IEthTransactionDAO {
 
 
-	public int updateTxStatus(EthTransaction tx) {
+	public void updateTxStatus(List<EthTransaction> txList) {
 
-		return super.update(NAMESPACE.concat("updateTxStatus"), tx);
+		 super.updateBatch(NAMESPACE.concat("updateTxStatus"),(List) txList);
 
 	}
 

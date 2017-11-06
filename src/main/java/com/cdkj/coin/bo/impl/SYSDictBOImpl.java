@@ -11,6 +11,7 @@ package com.cdkj.coin.bo.impl;
 import java.util.Date;
 import java.util.List;
 
+import com.cdkj.coin.exception.BizErrorCode;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -47,11 +48,11 @@ public class SYSDictBOImpl extends PaginableBOImpl<SYSDict> implements
         SYSDict data = new SYSDict();
         data.setId(id);
         data.setDvalue(value);
-
         data.setUpdater(updater);
-        data.setUpdateDatetime(new Date());
         data.setRemark(remark);
-        sysDictDAO.update(data);
+        if (sysDictDAO.updateValue(data) <= 0) {
+            throw new BizException(BizErrorCode.DEFAULT_ERROR_CODE.getErrorCode(),"更新失败");
+        }
 
     }
 
@@ -85,26 +86,23 @@ public class SYSDictBOImpl extends PaginableBOImpl<SYSDict> implements
     }
 
     @Override
-    public void checkKeys(String parentKey, String key, String systemCode,
-            String companyCode) {
+    public void checkKeys(String parentKey, String key) {
         // 查看父节点是否存在
         SYSDict fDict = new SYSDict();
         fDict.setDkey(parentKey);
         fDict.setType(EDictType.FIRST.getCode());
-        fDict.setSystemCode(systemCode);
-        fDict.setCompanyCode(companyCode);
+
         if (getTotalCount(fDict) <= 0) {
-            throw new BizException("xn000000", "parentKey不存在");
+            throw new BizException(BizErrorCode.DEFAULT_ERROR_CODE.getErrorCode(), "parentKey不存在");
         }
         // 第二层数据字典 在当前父节点下key不能重复
         SYSDict condition = new SYSDict();
         condition.setParentKey(parentKey);
         condition.setDkey(key);
         condition.setType(EDictType.SECOND.getCode());
-        condition.setSystemCode(systemCode);
-        condition.setCompanyCode(companyCode);
+
         if (getTotalCount(condition) > 0) {
-            throw new BizException("xn000000", "当前节点下，key重复");
+            throw new BizException(BizErrorCode.DEFAULT_ERROR_CODE.getErrorCode(), "当前节点下，key重复");
         }
 
     }

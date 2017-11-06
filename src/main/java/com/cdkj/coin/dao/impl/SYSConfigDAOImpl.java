@@ -37,8 +37,9 @@ public class SYSConfigDAOImpl extends AMybatisTemplate implements ISYSConfigDAO 
      */
     @Override
     public int delete(SYSConfig data) {
-        // TODO Auto-generated method stub
-        return 0;
+
+        return super.delete(NAMESPACE.concat("deleteSysDict"),data);
+
     }
 
     /** 

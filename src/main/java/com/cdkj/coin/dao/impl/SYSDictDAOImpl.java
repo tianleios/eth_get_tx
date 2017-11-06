@@ -37,7 +37,7 @@ public class SYSDictDAOImpl extends AMybatisTemplate implements ISYSDictDAO {
      */
     @Override
     public int delete(SYSDict data) {
-        return super.delete(NAMESPACE.concat("delete_sysDict"), data);
+        return super.delete(NAMESPACE.concat("deleteSysDict"), data);
     }
 
     /** 
@@ -80,8 +80,8 @@ public class SYSDictDAOImpl extends AMybatisTemplate implements ISYSDictDAO {
      * @see com.cdkj.coin.dao.ISYSDictDAO#update(com.cdkj.coin.domain.SYSDict)
      */
     @Override
-    public int update(SYSDict data) {
-        return super.update(NAMESPACE.concat("update_sysDict"), data);
+    public int updateValue(SYSDict data) {
+        return super.update(NAMESPACE.concat("updateValue"), data);
     }
 
 }

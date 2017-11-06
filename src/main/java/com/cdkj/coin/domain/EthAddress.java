@@ -1,6 +1,7 @@
 package com.cdkj.coin.domain;
 
 import java.util.Date;
+import java.util.List;
 
 import com.cdkj.coin.dao.base.ABaseDO;
 
@@ -25,6 +26,17 @@ public class EthAddress extends ABaseDO {
 
     //生成时间
     private Date createDatetime;
+
+    //###########  以下为查询所填加的属性 #############
+    private List<String> typeList;
+
+    public List<String> getTypeList() {
+        return typeList;
+    }
+
+    public void setTypeList(List<String> typeList) {
+        this.typeList = typeList;
+    }
 
     public static long getSerialVersionUID() {
         return serialVersionUID;

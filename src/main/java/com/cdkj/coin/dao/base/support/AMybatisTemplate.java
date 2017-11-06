@@ -11,6 +11,7 @@ package com.cdkj.coin.dao.base.support;
 import java.io.Serializable;
 import java.util.List;
 
+import com.cdkj.coin.domain.EthTransaction;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.cdkj.coin.dao.base.ABaseDO;
@@ -144,8 +145,7 @@ public abstract class AMybatisTemplate {
 
     /**
      * 批量更新
-     * 
-     * @param statement
+     *  @param statement
      * @param list
      */
     protected void updateBatch(String statement, List<Object> list) {

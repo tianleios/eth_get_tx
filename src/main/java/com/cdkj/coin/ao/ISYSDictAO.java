@@ -12,6 +12,8 @@ import java.util.List;
 
 import com.cdkj.coin.bo.base.Paginable;
 import com.cdkj.coin.domain.SYSDict;
+import com.cdkj.coin.dto.req.SysDictAddReq;
+import com.cdkj.coin.dto.req.SysDictUpdateReq;
 import com.cdkj.coin.dto.req.XN623900Req;
 
 /** 
@@ -22,7 +24,7 @@ import com.cdkj.coin.dto.req.XN623900Req;
 public interface ISYSDictAO {
     static String DEFAULT_ORDER_COLUMN = "id";
 
-    public Long addSecondDict(XN623900Req req);
+    public Long addSecondDict(SysDictAddReq req);
 
     public void dropSYSDict(Long id);
 
@@ -34,4 +36,7 @@ public interface ISYSDictAO {
     public List<SYSDict> querySysDictList(SYSDict condition);
 
     public SYSDict getSYSDict(Long id);
+
+    public void updateSYSDict(SysDictUpdateReq data);
+
 }

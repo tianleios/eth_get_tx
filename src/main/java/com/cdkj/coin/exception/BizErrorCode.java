@@ -5,6 +5,8 @@ package com.cdkj.coin.exception;
  */
 public enum BizErrorCode {
 
+
+    DEFAULT_ERROR_CODE("xn000000","自己填充"),
     PUSH_STATUS_UPDATE_FAILURE("eth000001","地址状态更新失败");
 
     private String errorCode;

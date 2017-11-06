@@ -13,8 +13,6 @@ public class AddressDetailReq {
     private String address;
 
     //
-
-
     public String getAddress() {
         return address;
     }

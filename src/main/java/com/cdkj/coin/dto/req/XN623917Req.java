@@ -18,12 +18,6 @@ public class XN623917Req {
     // key(必填)
     private String key;
 
-    // 公司编号(必填)
-    private String companyCode;
-
-    // 系统编号(必填)
-    private String systemCode;
-
     public String getKey() {
         return key;
     }
@@ -32,19 +26,4 @@ public class XN623917Req {
         this.key = key;
     }
 
-    public String getCompanyCode() {
-        return companyCode;
-    }
-
-    public void setCompanyCode(String companyCode) {
-        this.companyCode = companyCode;
-    }
-
-    public String getSystemCode() {
-        return systemCode;
-    }
-
-    public void setSystemCode(String systemCode) {
-        this.systemCode = systemCode;
-    }
 }

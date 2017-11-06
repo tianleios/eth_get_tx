@@ -53,6 +53,27 @@ public class EthTransaction extends ABaseDO {
 
 	private String status;
 
+	// ################# 一下属性为查询而添加 ##############
+	private Date blockCreateDatetimeStart;
+	private Date blockCreateDatetimeEnd;
+
+
+	public Date getBlockCreateDatetimeStart() {
+		return blockCreateDatetimeStart;
+	}
+
+	public void setBlockCreateDatetimeStart(Date blockCreateDatetimeStart) {
+		this.blockCreateDatetimeStart = blockCreateDatetimeStart;
+	}
+
+	public Date getBlockCreateDatetimeEnd() {
+		return blockCreateDatetimeEnd;
+	}
+
+	public void setBlockCreateDatetimeEnd(Date blockCreateDatetimeEnd) {
+		this.blockCreateDatetimeEnd = blockCreateDatetimeEnd;
+	}
+
 	public static long getSerialVersionUID() {
 		return serialVersionUID;
 	}

@@ -23,13 +23,14 @@ import java.util.List;
 public interface IEthAddressAO {
     // 定时器调用：每隔**同步账户流水
     public void doEthTransactionSync();
+
     public UploadEthAddressRes uploadAddress(UploadEthAddressReq req);
 
     //
     public List<EthAddress> queryEthAddressListByAddress(String address);
 
     //根据状态列表 分页查
-    public Paginable<EthAddress> queryEthAddressPageByStatusList(List<String> statusList, int start, int limit);
+    public Paginable<EthAddress> queryEthAddressPageByStatusList(List<String> typeList, int start, int limit);
 
 
 }

@@ -4,6 +4,7 @@ import org.hibernate.validator.constraints.NotBlank;
 
 import javax.validation.constraints.DecimalMin;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import java.util.List;
 
 /**
@@ -19,8 +20,7 @@ public class AddressPageReq {
     @DecimalMin(value = "1")
     private String limit;
 
-    @NotNull
-    private List<String> statusList;
+    private List<String> typeList;
 
     public String getStart() {
         return start;
@@ -38,11 +38,11 @@ public class AddressPageReq {
         this.limit = limit;
     }
 
-    public List<String> getStatusList() {
-        return statusList;
+    public List<String> getTypeList() {
+        return typeList;
     }
 
-    public void setStatusList(List<String> statusList) {
-        this.statusList = statusList;
+    public void setTypeList(List<String> typeList) {
+        this.typeList = typeList;
     }
 }

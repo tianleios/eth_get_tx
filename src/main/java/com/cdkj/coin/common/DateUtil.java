@@ -137,6 +137,7 @@ public class DateUtil {
         try {
             date = formater.parse(str);
         } catch (Exception e) {
+            e.printStackTrace();
         }
         return date;
     }

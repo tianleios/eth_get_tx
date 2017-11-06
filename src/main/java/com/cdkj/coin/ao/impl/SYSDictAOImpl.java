@@ -11,6 +11,10 @@ package com.cdkj.coin.ao.impl;
 import java.util.Date;
 import java.util.List;
 
+import com.cdkj.coin.common.StringUtil;
+import com.cdkj.coin.dto.req.SysDictAddReq;
+import com.cdkj.coin.dto.req.SysDictUpdateReq;
+import org.apache.commons.lang3.math.NumberUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -32,24 +36,22 @@ public class SYSDictAOImpl implements ISYSDictAO {
     ISYSDictBO sysDictBO;
 
     @Override
-    public Long addSecondDict(XN623900Req req) {
+    public Long addSecondDict(SysDictAddReq req) {
         String parentKey = req.getParentKey();
         String key = req.getDkey();
-        String companyCode = req.getCompanyCode();
-        String systemCode = req.getSystemCode();
-        sysDictBO.checkKeys(parentKey, key, systemCode, companyCode);
+
+        //检查 parentKey 是否存在，parentKey + key 是否唯一
+        sysDictBO.checkKeys(parentKey, key);
         SYSDict sysDict = new SYSDict();
         sysDict.setType(EDictType.SECOND.getCode());
         sysDict.setParentKey(parentKey);
         sysDict.setDkey(key);
         sysDict.setDvalue(req.getDvalue());
-
         sysDict.setUpdater(req.getUpdater());
         sysDict.setUpdateDatetime(new Date());
         sysDict.setRemark(req.getRemark());
-        sysDict.setSystemCode(req.getSystemCode());
-        sysDict.setCompanyCode(req.getCompanyCode());
 
+        //
         return sysDictBO.saveSecondDict(sysDict);
     }
 
@@ -77,5 +79,11 @@ public class SYSDictAOImpl implements ISYSDictAO {
     @Override
     public SYSDict getSYSDict(Long id) {
         return sysDictBO.getSYSDict(id);
+    }
+
+    @Override
+    public void updateSYSDict(SysDictUpdateReq req) {
+
+         this.sysDictBO.refreshSYSDict(NumberUtils.createLong(req.getId()) ,req.getDvalue(),req.getUpdater(),req.getRemark());
     }
 }

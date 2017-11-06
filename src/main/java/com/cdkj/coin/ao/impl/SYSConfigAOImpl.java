@@ -15,6 +15,7 @@ import com.cdkj.coin.domain.SYSConfig;
  */
 @Service
 public class SYSConfigAOImpl implements ISYSConfigAO {
+
     @Autowired
     ISYSConfigBO sysConfigBO;
 
@@ -36,8 +37,7 @@ public class SYSConfigAOImpl implements ISYSConfigAO {
     }
 
     @Override
-    public SYSConfig getSYSConfig(String key, String companyCode,
-            String systemCode) {
-        return sysConfigBO.getSYSConfig(key, companyCode, systemCode);
+    public SYSConfig getSYSConfig(String key) {
+        return sysConfigBO.getSYSConfig(key);
     }
 }

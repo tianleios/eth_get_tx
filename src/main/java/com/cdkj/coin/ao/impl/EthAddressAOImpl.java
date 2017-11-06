@@ -19,6 +19,8 @@ import com.cdkj.coin.domain.EthTransaction;
 import com.cdkj.coin.dto.req.UploadEthAddressReq;
 import com.cdkj.coin.dto.res.UploadEthAddressRes;
 import com.cdkj.coin.enums.*;
+import com.cdkj.coin.exception.BizErrorCode;
+import com.cdkj.coin.exception.BizException;
 import com.cdkj.coin.http.BizConnecter;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
@@ -63,6 +65,15 @@ public class EthAddressAOImpl implements IEthAddressAO {
     @Override
     public UploadEthAddressRes uploadAddress(UploadEthAddressReq req) {
 
+        //首先判断 地址 + 类型 是否已存在
+        EthAddress queryCountCondation = new EthAddress();
+        queryCountCondation.setAddress(req.getAddress());
+        queryCountCondation.setType(req.getType());
+       int alreadyCount = this.ethAddressBO.queryEthAddressCount(queryCountCondation);
+       if (alreadyCount > 0) {
+           throw  new  BizException(BizErrorCode.DEFAULT_ERROR_CODE.getErrorCode(),"地址 + 类型，已经存在");
+       }
+
         UploadEthAddressRes res = this.ethAddressBO.uploadAddress(req);
         return res;
 
@@ -73,15 +84,19 @@ public class EthAddressAOImpl implements IEthAddressAO {
 
         EthAddress condition = new EthAddress();
         condition.setAddress(address);
-        return   this.ethAddressBO.queryEthAddressList(condition);
+        return  this.ethAddressBO.queryEthAddressList(condition);
     }
 
     @Override
-    public Paginable<EthAddress> queryEthAddressPageByStatusList(List<String> statusList, int start, int limit){
+    public Paginable<EthAddress> queryEthAddressPageByStatusList(List<String> typeList, int start, int limit){
 
-//        this.ethAddressBO.get
-        // 是否在 次 就完成分页工作
-        return this.ethAddressBO.queryPageByStatusList(statusList,start,limit);
+        if (typeList != null && typeList.isEmpty()) {
+            throw  new BizException(BizErrorCode.DEFAULT_ERROR_CODE.getErrorCode(),"size 需大于 0");
+        }
+        //
+        EthAddress condation = new EthAddress();
+        condation.setTypeList(typeList);
+        return this.ethAddressBO.getPaginable(start,limit,condation);
 
     }
 
@@ -177,8 +192,7 @@ public class EthAddressAOImpl implements IEthAddressAO {
 
         //修改 区块遍历 信息
         SYSConfig config = sysConfigBO.getSYSConfig(
-                SysConstants.CUR_BLOCK_NUMBER, ESystemCode.COIN.getCode(),
-                ESystemCode.COIN.getCode());
+                SysConstants.CUR_BLOCK_NUMBER);
         //
         sysConfigBO.refreshSYSConfig(config.getId(),
                 String.valueOf(blockNumber + 1), "code", "当前扫描至哪个区块");

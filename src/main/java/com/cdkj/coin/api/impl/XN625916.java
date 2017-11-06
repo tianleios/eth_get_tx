@@ -29,6 +29,7 @@ public class XN625916 extends AProcessor {
 
     private XN623916Req req = null;
 
+    // 根据 id 查系统参数
     /** 
      * @see com.cdkj.coin.api.IProcessor#doBusiness()
      */

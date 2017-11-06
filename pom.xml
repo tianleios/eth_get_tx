@@ -481,7 +481,7 @@
 	<!--</build>-->
 
 	<build>
-		<finalName>coni-webapp</finalName>
+		<finalName>con-webapp</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>

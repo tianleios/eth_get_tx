@@ -24,16 +24,9 @@ public interface IEthAddressBO extends IPaginableBO<EthAddress> {
             String address, String password);
 
     //
-    public Paginable<EthAddress> queryPageByStatusList(List<String> statusList, int start, int limit);
-
     public List<EthAddress> queryEthAddressList(EthAddress condition);
 
-//    public List<EthAddress> queryMEthAddressList();
-
-//    public EthAddress getEthAddress(Long id);
-
-    public EthAddress getEthAddress(EEthAddressType type, String address);
-
-//    public EthAddress getEthAddressByUserId(String userId);
+    //
+    public int queryEthAddressCount(EthAddress condition);
 
 }

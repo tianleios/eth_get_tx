@@ -19,32 +19,16 @@ import com.cdkj.coin.domain.SYSConfig;
  * @history:
  */
 public interface ISYSConfigBO extends IPaginableBO<SYSConfig> {
+
+    //
     public int refreshSYSConfig(Long id, String cvalue, String updater,
             String remark);
 
+    //
     public SYSConfig getSYSConfig(Long id);
 
-    /**
-     * systemCode=companyCode时调用此方法
-     * @param systemCode
-     * @return 
-     * @create: 2017年3月22日 下午3:45:36 myb858
-     * @history:
-     */
-    public Map<String, String> getConfigsMap(String systemCode);
-
-    /**
-     * systemCode=companyCode时调用此方法
-     * @param key
-     * @param systemCode
-     * @return 
-     * @create: 2017年3月22日 下午3:45:54 myb858
-     * @history:
-     */
-    public SYSConfig getSYSConfig(String key, String systemCode);
-
-    public SYSConfig getSYSConfig(String key, String companyCode,
-            String systemCode);
+    //
+    public SYSConfig getSYSConfig(String key);
 
     public String getStringValue(String key);
 

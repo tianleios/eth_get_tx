@@ -15,7 +15,6 @@ import com.cdkj.coin.bo.ISYSConfigBO;
 import com.cdkj.coin.bo.base.PaginableBOImpl;
 import com.cdkj.coin.dao.ISYSConfigDAO;
 import com.cdkj.coin.domain.SYSConfig;
-import com.cdkj.coin.enums.ESystemCode;
 import com.cdkj.coin.exception.BizException;
 
 /**
@@ -40,7 +39,6 @@ public class SYSConfigBOImpl extends PaginableBOImpl<SYSConfig> implements
         SYSConfig data = new SYSConfig();
         data.setId(id);
         data.setCvalue(cvalue);
-
         data.setUpdater(updater);
         data.setUpdateDatetime(new Date());
         data.setRemark(remark);
@@ -62,32 +60,12 @@ public class SYSConfigBOImpl extends PaginableBOImpl<SYSConfig> implements
     }
 
     @Override
-    public Map<String, String> getConfigsMap(String systemCode) {
-        Map<String, String> map = new HashMap<String, String>();
-        if (StringUtils.isNotBlank(systemCode)) {
-            SYSConfig condition = new SYSConfig();
-            condition.setSystemCode(systemCode);
-            List<SYSConfig> list = sysConfigDAO.selectList(condition);
-            if (CollectionUtils.isNotEmpty(list)) {
-                for (SYSConfig sysConfig : list) {
-                    map.put(sysConfig.getCkey(), sysConfig.getCvalue());
-                }
-            }
-        }
-        return map;
+    public SYSConfig getSYSConfig(String key) {
 
-    }
-
-    @Override
-    public SYSConfig getSYSConfig(String key, String companyCode,
-            String systemCode) {
         SYSConfig sysConfig = null;
-        if (StringUtils.isNotBlank(key) && StringUtils.isNotBlank(systemCode)
-                && StringUtils.isNotBlank(companyCode)) {
+        if (StringUtils.isNotBlank(key) ) {
             SYSConfig condition = new SYSConfig();
             condition.setCkey(key);
-            condition.setCompanyCode(companyCode);
-            condition.setSystemCode(systemCode);
             List<SYSConfig> sysConfigList = sysConfigDAO.selectList(condition);
             if (CollectionUtils.isNotEmpty(sysConfigList)) {
                 sysConfig = sysConfigList.get(0);
@@ -99,15 +77,9 @@ public class SYSConfigBOImpl extends PaginableBOImpl<SYSConfig> implements
     }
 
     @Override
-    public SYSConfig getSYSConfig(String key, String systemCode) {
-        return getSYSConfig(key, systemCode, systemCode);
-    }
-
-    @Override
     public Double getDoubleValue(String key) {
         Double result = 0.0;
-        SYSConfig config = getSYSConfig(key, ESystemCode.COIN.getCode(),
-            ESystemCode.COIN.getCode());
+        SYSConfig config = getSYSConfig(key);
         try {
             result = Double.valueOf(config.getCvalue());
         } catch (Exception e) {
@@ -120,8 +92,7 @@ public class SYSConfigBOImpl extends PaginableBOImpl<SYSConfig> implements
     @Override
     public Integer getIntegerValue(String key) {
         Integer result = 0;
-        SYSConfig config = getSYSConfig(key, ESystemCode.COIN.getCode(),
-            ESystemCode.COIN.getCode());
+        SYSConfig config = getSYSConfig(key);
         try {
             result = Integer.valueOf(config.getCvalue());
         } catch (Exception e) {
@@ -133,16 +104,14 @@ public class SYSConfigBOImpl extends PaginableBOImpl<SYSConfig> implements
 
     @Override
     public String getStringValue(String key) {
-        SYSConfig config = getSYSConfig(key, ESystemCode.COIN.getCode(),
-            ESystemCode.COIN.getCode());
+        SYSConfig config = getSYSConfig(key);
         return config.getCvalue();
     }
 
     @Override
     public Long getLongValue(String key) {
         Long result = 0L;
-        SYSConfig config = getSYSConfig(key, ESystemCode.COIN.getCode(),
-            ESystemCode.COIN.getCode());
+        SYSConfig config = getSYSConfig(key);
         try {
             result = Long.valueOf(config.getCvalue());
         } catch (Exception e) {
